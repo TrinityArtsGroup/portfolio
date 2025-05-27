@@ -3,45 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Examples</title>
+    <title>Film/Video Projects</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="video/video.css">
+    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 style="margin-bottom:0;">Portfolio of Patrick Flynn</h1>
-        <nav>
-            <a href="index.html">Home</a> | <a href="audio.html">Audio</a> | <a href="color/color-theory.html">Color Theory</a> | <a href="design.html">Design</a> |
-            <a href="game.html">Game Screen</a> | <a href="resume.html">Resume</a> | <a href="typography/typography.html">Typography</a> | <a href="video.html">Video</a>
-        </nav>
-    </header>
-    <section>
-        <h2>Video Examples</h2>
-        <img src="video/ourhometown.jpg" alt="Our Hometown" width="200" height="300">
-        <p><em>"Our Hometown"</em> (2013)</p>
-        <p>Produced in 2013 in honor of the town's centennial, and in conjunction with the Denville<br>
-        Historical Society, I wrote, produced, shot, and directed the following documentary feature.<br>
-        It was included with other items of import to be sealed within the centennial vault, which is<br>
-        housed in the  municipal building. The vault is scheduled to be reopened in 2113.</p>
-        <div><iframe width="560" height="315"
-            src="https://www.youtube.com/embed/VjPjiXfv478?si=O0dkVonrBN3joQ31"
-            title="YouTube video player"
-            style="border: none;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
-        </div>  
-        <p><em>"A Tug of War"</em> (2025)</p>
-        <p>This was an animation project completed utilizing Adobe Animate. By utilizing two elements<br>
-        I’ve used previously in the course; I tried to come up with a simple, clear, and funny little<br>
-        animation. I was aiming for an Abbott and Costello, or Laurel and Hardy type feeling.</p>
-        <p><video src="video/final-project-no-1.mp4" controls
-            height="315" width="560"></video></p>
-    </section>
-    <footer>
-        <hr>
-        <img src="index/logo.png" alt="Logo" width="85" height="85">
-        <p>Email: <a href="mailto:patrick@trinityartsgroup.com">Patrick@TrinityArtsGroup.com</a><br>
-        <p>&copy; 2025 Patrick Flynn. All rights reserved.</p>
-    </footer>
+<header class="nav-container">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Trinity Arts Group Logo" class="nav-logo">
+  </div>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="dropdown">
+        <a href="showcase.html">Showcase</a>
+        <ul class="dropdown-menu">
+          <li><a href="game.html">Game Screen</a></li>
+          <li class="dropdown-sub">
+            <a href="color-theory.html">Color Theory</a>
+            <ul class="dropdown-submenu">
+              <li><a href="color-themes.html">Various Color Themes</a></li>
+              <li><a href="color-article.html">Web Page Article</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-sub">
+            <a href="typography.html">Typography</a>
+            <ul class="dropdown-submenu">
+              <li><a href="font-types.html">Article on Font Types</a></li>
+              <li><a href="typo-article.html">Typography Article</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="theatre.html">Theatre</a></li>
+      <li><a href="video.html">Video</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="readable-overlay">
+  <section class="wrap-section">
+    <a href="https://www.youtube.com/watch?v=VjPjiXfv478" target="_blank">
+      <img src="video/ourhometown.jpg" alt="Our Hometown" class="side-image glow-hover">
+    </a>
+    <div>
+    <h2><em>"Our Hometown"</em> (2013)</h2>
+    <p>Produced in 2013 in honor of my hometown's centennial, and in conjunction with the Denville Historical Society, I wrote, produced, shot, and directed 
+    the following documentary feature. It was included with other items of import to be sealed within the centennial vault, which is housed in the municipal 
+    building. The vault is scheduled to be reopened in 2113.</p><br>
+    <p>The plot synopsis is as follows: "Denville's history is a rich and vibrant one. "Our Hometown: Celebrating Denville's Centennial" provides the viewer a 
+    visual window into that history. Over twenty residents, from historians and government officials, to educators, religious leaders, and grandparents recount 
+    our growth as a township. Visually striking and featuring a triumphant score from jazz giant Tony Mottola, the film is a powerful testament to the town's 
+    dedication to progress and community."<br> <br>It is presented here in its entirity.</p>
+  <div class="embed-responsive">
+    <iframe 
+      src="https://www.youtube.com/embed/VjPjiXfv478?si=O0dkVonrBN3joQ31" 
+      title="Our Hometown Documentary"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+</main>
+<footer>
+  <hr>
+  <div class="footer-container">
+    <img src="images/logo.png" alt="Logo" class="footer-logo">
+    <div class="footer-info">
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Patrick Flynn. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

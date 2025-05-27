@@ -1,63 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Examples</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Examples</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="design/design.css">
+  <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1 style="margin-bottom:0;">Portfolio of Patrick Flynn</h1>
-        <nav>
-            <a href="index.html">Home</a> | <a href="audio.html">Audio</a> | <a href="color/color-theory.html">Color Theory</a> | <a href="design.html">Design</a> |
-            <a href="game.html">Game Screen</a> | <a href="resume.html">Resume</a> | <a href="typography/typography.html">Typography</a> | <a href="video.html">Video</a>
-        </nav>
-    </header>
-    <section>
-        <h2>Acryllic / Collage Examples</h2>
-        <p>These are a few examples of my work in acrylics and collage. I have been working in this medium since 2020.</p>
-        <img src="design/ahab.png" alt="Ahab" width="500" height="400">
-        <p><em>"...Ahab Stands Alone"</em> (2020)</p>
-        <ul>
-            <li>This piece was inspired by the novel "Moby Dick" by Herman Melville. It is my brother's favorite <br>
-            book and I wanted to create something that he would appreciate. The piece is acryllic on canvas, and <br>
-            is three dimensional in nature. It utilizes driftwood, seashells and the remains of a horseshoe crab <br>
-            found all on location in Orleans, MA in September of 2020.</li>
+<header class="nav-container">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Trinity Arts Group Logo" class="nav-logo">
+  </div>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="dropdown">
+        <a href="showcase.html">Showcase</a>
+        <ul class="dropdown-menu">
+          <li><a href="game.html">Game Screen</a></li>
+          <li class="dropdown-sub">
+            <a href="color-theory.html">Color Theory</a>
+            <ul class="dropdown-submenu">
+              <li><a href="color-themes.html">Various Color Themes</a></li>
+              <li><a href="color-article.html">Web Page Article</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-sub">
+            <a href="typography.html">Typography</a>
+            <ul class="dropdown-submenu">
+              <li><a href="font-types.html">Article on Font Types</a></li>
+              <li><a href="typo-article.html">Typography Article</a></li>
+            </ul>
+          </li>
         </ul>
-        <img src="design/crime1.png" alt="Crime01" width="350" height="500">
-        <p><em>"Crime of the Century"</em> (2019) - First Version</p>
-        <ul> 
-        <li>This piece was inspired by a screenplay entitled "Jafsie" that is based on the infamous 1932 Lindbergh <br>
-            Kidnapping Case that was told from an unorthodox point of view: that of the go-between for <em>both</em> the <br>
-            kidnappers and the Lindbergh's and the kidnappers - a 78 year old Bronx school Principal named Dr. John <br>
-            F. Condon (J.F.C). It was the first canvas that I ever designed. Utilizing all kinds of mixed media, <br>
-            from vellum and acrylic to cardstock. Above is the first version from 2019, which was gifted to the <br>
-            co-author of the screenplay, Mark Lechner.</li>
-        </ul>
-        <img src="design/crime2.png" alt="Crime02" width="350" height="500">
-        <p><em>"Crime of the Century"</em> (2020) - Second Version</p>
-        <ul>
-            <li>This is the second version of the piece, which I kept for myself. It is a more refined version of the <br>
-            original, and was created in 2020. Whereas, the first version focused primarily on the newspaper media's <br>
-            cavalier attitude and the nature of the America's first celebrity, this second version puts a spotlight <br>
-            directly on little Charlie himself, and how his life got lost in the maelstrom.</li>
-        </ul>
-         <img src="design/dallas.png" alt="Dallas" width="350" height="500">
-        <p><em>"Forgive Dallas"</em> (2021)</p>
-        <ul>
-            <li>This piece was inspired by the 1963 assassination of President John F. Kennedy, a favorite subject <br>
-            of poet Tohm Bakelas, of which this was a commission. It is a collage piece similar to the Lindbergh <br>
-            collage, but it pushes even further - integrating newspaper clippings, photo paper, vellum, acryllic, <br>
-            16mm film strips, dye, and caro syrup. It even utilizes several vintage Kennedy political buttons. <br>
-            Below is the poet proudly displaying the finished canvas.</li>
-        </ul>
-            <p><img src="design/tohm.png" alt="Tohm" width="375" height="500"></p>
-        </section>
-        <footer>
-            <hr>
-            <img src="index/logo.png" alt="Logo" width="85" height="85">
-            <p>Email: <a href="mailto:patrick@trinityartsgroup.com">Patrick@TrinityArtsGroup.com</a><br>
-            <p>&copy; 2025 Patrick Flynn. All rights reserved.</p>
-        </footer>
-    </body>
-    </html>
+      </li>
+      <li><a href="theatre.html">Theatre</a></li>
+      <li><a href="video.html">Video</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="section">
+  <div class="readable-overlay">
+    <h2>Art Examples</h2>
+   <p>Below are some examples of my design work. Click on the images to see more details about each piece. All works shown — and others 
+   in a similar style — are available for purchase. I also accept custom commissions and can create original pieces tailored to your 
+   specifications, or faithful recreations of any design featured here. If you're interested, feel free to reach out using the contact 
+   information at the bottom of the page.
+</p>
+</div>
+</div>
+
+  <div class="art-piece section" onclick="toggleText(this)">
+    <img src="design/ahab.png" alt="...Ahab Stands Alone" class="art-image">
+    <div class="art-text">
+      <h3><em>"...Ahab Stands Alone"</em> (2020)</h3>
+      <p>This piece was inspired by the novel "Moby Dick" by Herman Melville. It is my brother's favorite book and I wanted to 
+      create something that he would appreciate. The piece is acrylic on canvas, and is three dimensional in nature. It utilizes 
+      driftwood, seashells and the remains of a horseshoe crab found all on location in Orleans, MA in September of 2020.</p>
+    </div>
+  </div>
+
+  <div class="art-piece section" onclick="toggleText(this)">
+    <img src="design/crime1.png" alt="Crime of the Century v1" class="art-image">
+    <div class="art-text">
+      <h3><em>"Crime of the Century"</em> (2019) - First Version</h3>
+      <p>This piece was inspired by a screenplay entitled "Jafsie" that is based on the infamous 1932 Lindbergh Kidnapping Case 
+      that was told from an unorthodox point of view: that of the go-between for both the kidnappers and the Lindberghs—a 78-year-old 
+      Bronx school principal named Dr. John F. Condon (J.F.C). It was the first canvas that I ever designed. Utilizing all kinds of 
+      mixed media, from vellum and acrylic to cardstock. Above is the first version from 2019, which was gifted to the co-author of 
+      the screenplay, Mark Lechner.</p>
+    </div>
+  </div>
+
+  <div class="art-piece section" onclick="toggleText(this)">
+    <img src="design/crime2.png" alt="Crime of the Century v2" class="art-image">
+    <div class="art-text">
+      <h3><em>"Crime of the Century"</em> (2020) - Second Version</h3>
+      <p>This is the second version of the piece, which I kept for myself. It is a more refined version of the original, and was 
+      created in 2020. Whereas the first version focused primarily on the newspaper media's cavalier attitude and the nature of 
+      America's first celebrity, this second version puts a spotlight directly on little Charlie himself, and how his life got 
+      lost in the maelstrom.</p>
+    </div>
+  </div>
+
+  <div class="art-piece section" onclick="toggleText(this)">
+    <img src="design/dallas.png" alt="Forgive Dallas" class="art-image">
+    <div class="art-text">
+      <h3><em>"Forgive Dallas"</em> (2021)</h3>
+      <p>This piece was inspired by the 1963 assassination of President John F. Kennedy, a favorite subject of poet Tohm Bakelas, of 
+        which this was a commission. It is a collage piece similar to the Lindbergh collage, but it pushes even further—integrating 
+        newspaper clippings, photo paper, vellum, acrylic, 16mm film strips, dye, and caro syrup. It even utilizes several vintage 
+        Kennedy political buttons.</p>
+    </div>
+  </div>
+
+  <div class="art-piece section" onclick="toggleText(this)">
+    <img src="design/justice.png" alt="Bending Towards Justice" class="art-image">
+    <div class="art-text">
+    <h3><em>Bending Towards Justice</em> (2021)</h3>
+    <p>Originally commissioned for neighbors who were moving out of state, and later recomissioned by a family friend to hang in their
+    company's HR office. This painting features the iconic Black Power fist behind the classic liberation colors of red, black, green and 
+    yellow. The canvas utilizes mixed media of cryllic, vellum and photo paper. Sections of the fist are overlayed with iconic black artists,
+    musicians, thinkers and activists; both famous and forgotten. Including Malcolm X, John Coltrane, Maya Angelou, George Floyd, Leadbelly, 
+    Rubin 'Hurricane' Carter, Olympian Tommie Smith, and many more.</p>
+    </div>
+  </div>
+  <div class="readable-overlay"> 
+  <div class="section gallery">
+  <h2>Gallery</h2>
+  <div class="art-piece">
+    <img src="design/alex.JPG" alt="Alex" class="art-image glow-hover">
+    <img src="design/bend.jpg" alt="Akeem" class="art-image glow-hover">
+    <img src="design/bet.jpg" alt="Raise Bet or Call" class="art-image glow-hover">
+    <img src="design/birds.jpg" alt="Birds of a Feather" class="art-image glow-hover">
+    <img src="design/night.jpg" alt="Until the Night" class="art-image glow-hover">
+    <img src="design/tohm.JPEG" alt="Tohm" class="art-image glow-hover">
+    <img src="design/fuller.jpeg" alt="The Dark Page- Revisited" class="art-image glow-hover">
+     <img src="design/vulture.JPEG" alt="The Vulture" class="art-image glow-hover">
+  </div>
+</div>
+</div>
+</main>
+<footer>
+  <hr>
+  <div class="footer-container">
+    <img src="images/logo.png" alt="Logo" class="footer-logo">
+    <div class="footer-info">
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Patrick Flynn. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script>
+function toggleText(el) {
+  el.classList.toggle("active");
+}
+</script>
+</body>
+</html>

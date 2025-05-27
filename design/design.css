@@ -1,0 +1,91 @@
+body {
+  background: url('design.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.gallery.readable-overlay {
+  max-width: 100%;
+  padding: 3rem;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-grid figure {
+  flex: 0 0 calc(33.333% - 2rem);
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+  box-shadow: 0 0 10px 3px gold;
+}
+
+.gallery-grid figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid figure {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid figure {
+    width: 100%;
+  }
+}
+
+.art-piece {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.art-image {
+  width: 350px;
+  height: auto;
+  border: 4px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.art-image:hover {
+  border-color: gold;
+}
+
+.art-text {
+  flex: 1;
+  max-width: 600px;
+  display: none;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.art-piece.active .art-text {
+  display: block;
+}

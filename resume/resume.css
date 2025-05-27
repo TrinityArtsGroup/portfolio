@@ -1,0 +1,32 @@
+body {
+  background: url('resume.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.divider-diamond {
+  font-size: 1.25rem;
+  color: black;
+  padding: 0 0.5rem;
+}
+
+main.resume-box {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.resume-box h1,
+.resume-box h2,
+.resume-box h3 {
+  color: #007c9d;
+  margin-bottom: 0.75rem;
+  text-shadow: 1px 1px 2px black;
+}
+
+.resume-box td::before {
+  content: "♦";
+  color: red;
+  margin-right: 0.5rem;
+}

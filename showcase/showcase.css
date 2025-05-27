@@ -1,0 +1,104 @@
+body {
+  background: url('showcase.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-toggle-card {
+  position: relative;
+  width: 250px;
+  aspect-ratio: 250 / 148;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.image-toggle-photo {
+  position: relative;
+  width: 250px;
+  aspect-ratio: 2 / 3;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.image-toggle-card input[type="checkbox"]:checked ~ .card-image.front,
+.image-toggle-photo input[type="checkbox"]:checked ~ .card-image.front {
+  opacity: 0;
+  z-index: 1;
+}
+
+.image-toggle-card input[type="checkbox"]:checked ~ .card-image.back,
+.image-toggle-photo input[type="checkbox"]:checked ~ .card-image.back {
+  opacity: 1;
+  z-index: 2;
+}
+
+.card-image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image.front {
+  opacity: 1;
+  z-index: 2;
+}
+
+.card-image.back {
+  opacity: 0;
+  z-index: 1;
+}
+
+.wrap-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.wrap-inline p {
+  flex: 1;
+  min-width: 250px;
+  margin: 0;
+  text-indent: 1.5em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.side-image {
+  width: 250px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.card-video {
+  width: 250px;
+  height: auto;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}

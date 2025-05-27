@@ -1,32 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>"Red Harvest" Title Screen"</title>
-<body>
-    <header>
-        <h1 style="margin-bottom:0;">Portfolio of Patrick Flynn</h1>
-        <nav>
-            <a href="index.html">Home</a> | <a href="audio.html">Audio</a> | <a href="color/color-theory.html">Color Theory</a> | <a href="design.html">Design</a> |
-            <a href="game.html">Game Screen</a> | <a href="resume.html">Resume</a> | <a href="typography/typography.html">Typography</a> | <a href="video.html">Video</a>
-        </nav>
-    </header>
-    <br>
-    <section>
-    <h2 style="margin-bottom:0;"><em>"Red Harvest"</em> Video Game Screen</h2>
-    <p>With my deep knowledge of film and its history, I decided to envision a game I would have loved to see<br>
-    growing up in the 1990’s – an adaptation of the book that started an entire genre! Dashiell Hammett’s<br>
-    classic 1929 noir, <em>"Red Harvest"</em>, and its enigmatic main character – known colloquially as ‘the<br>
-    Continental Op’. As of 2025, Hammet’s book and the “Op” character have fallen into the public domain.</p>
-    <img src="game/redharvest.jpg" alt="Red Harvest" width="550" height="350">
-    <p><audio src="game/djangominorswing.mp3" controls></audio></p>
-	</section>
-    <footer>
-    <hr>
-    <img src="index/logo.png" alt="Logo" width="85" height="85">
-    <p>Email: <a href="mailto:patrick@trinityartsgroup.com">Patrick@TrinityArtsGroup.com</a><br>
-    <p>&copy; 2025 Patrick Flynn. All rights reserved.</p>
-    </footer>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>"Red Harvest" Game Screen</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="game/game.css">
+  <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="game/final-project-no-3.js"></script>
+</head>
+<body onload="init();">
+<header class="nav-container">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Trinity Arts Group Logo" class="nav-logo">
+  </div>
+  <nav class="main-nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="audio.html">Audio</a></li>
+      <li><a href="design.html">Design</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li class="dropdown">
+        <a href="showcase.html">Showcase</a>
+        <ul class="dropdown-menu">
+          <li><a href="game.html">Game Screen</a></li>
+          <li class="dropdown-sub">
+            <a href="color-theory.html">Color Theory</a>
+            <ul class="dropdown-submenu">
+              <li><a href="color-themes.html">Various Color Themes</a></li>
+              <li><a href="color-article.html">Web Page Article</a></li>
+            </ul>
+          </li>
+          <li class="dropdown-sub">
+            <a href="typography.html">Typography</a>
+            <ul class="dropdown-submenu">
+              <li><a href="font-types.html">Article on Font Types</a></li>
+              <li><a href="typo-article.html">Typography Article</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="theatre.html">Theatre</a></li>
+      <li><a href="video.html">Video</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="game-box">
+
+  <div class="section">
+  <div class="readable-overlay">
+    <h2><em>"Red Harvest"</em> Game Screen</h2>
+   <p>
+With my deep knowledge of film and its history, I decided to envision a game I would have loved to see
+growing up in the 1990’s – an adaptation of the book that started an entire genre! Dashiell Hammett’s
+classic 1929 noir, "Red Harvest", and its enigmatic main character – known colloquially as ‘the
+Continental Op’. As of 2025, Hammet’s book and the “Op” character have fallen into the public domain
+</p>
+</div>
+</div>
+
+  <div id="animation_container">
+    <canvas id="canvas" width="1024" height="768"></canvas>
+    <div id="dom_overlay_container"></div>
+  </div>
+</main>
+
+<footer>
+  <hr>
+  <div class="footer-container">
+    <img src="images/logo.png" alt="Logo" class="footer-logo">
+    <div class="footer-info">
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Patrick Flynn. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

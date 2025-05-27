@@ -1,0 +1,35 @@
+body {
+  background: url('themes.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.fixed-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem 0 2rem 0;
+}
+
+.swatch {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0.2rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.hex {
+  font-size: 0.8rem;
+  color: white;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.swatch + .hex {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: white;
+  text-align: center;
+}

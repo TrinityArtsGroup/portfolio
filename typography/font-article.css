@@ -1,0 +1,17 @@
+body {
+  background: url('font.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.side-by-side-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.side-by-side-gallery img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+}
+
