@@ -48,6 +48,14 @@ a:hover {
   color: gold;
 }
 
+.glow-hover {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 10px 3px gold;
+}
+
 p {
   text-indent: 1.5em;
   margin-bottom: 1rem;
@@ -70,6 +78,31 @@ p {
   margin: 0;
 }
 
+.wrap-section.only-text {
+  display: block;
+}
+
+.wrap-section.only-text h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.wrap-section.only-text p {
+  margin-top: 0;
+}
+
+
+.wrap-section > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+.wrap-section.only-text {
+  margin-top: 2rem;
+}
+
 .side-image {
   width: 240px;
   height: auto;
@@ -77,14 +110,6 @@ p {
   flex-shrink: 0;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-
-.glow-hover {
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.glow-hover:hover {
-  box-shadow: 0 0 10px 3px gold;
 }
 
 .readable-overlay {
@@ -95,15 +120,6 @@ p {
   max-width: 1000px;
   color: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-}
-
-.wrap-section > div {
-  flex: 1;
-  min-width: 250px;
-}
-
-.wrap-section.only-text {
-  margin-top: 2rem;
 }
 
 .readable-overlay::after {
