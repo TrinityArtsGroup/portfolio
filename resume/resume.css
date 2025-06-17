@@ -1,8 +1,3 @@
-body {
-  background: url('resume.png') no-repeat center center fixed;
-  background-size: cover;
-}
-
 .divider-diamond {
   font-size: 1.25rem;
   color: black;
@@ -11,13 +6,13 @@ body {
 
 main.resume-box {
   max-width: 850px;
-  margin: 3rem auto;
+  width: 100%;
+  margin-top: 0;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
-.resume-box h1,
 .resume-box h2,
 .resume-box h3 {
   color: #007c9d;
@@ -29,4 +24,48 @@ main.resume-box {
   content: "♦";
   color: red;
   margin-right: 0.5rem;
+}
+
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collapsible-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.3s ease, 
+              transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.collapsible-content.expanded {
+  opacity: 1;
+  transform: translateY(0);
+  padding-top: 1rem;
+}
+
+.collapsible-header.active .triangle-icon {
+  transform: rotate(0deg);
+}
+
+.collapsible-content ul,
+.collapsible-content p,
+.collapsible-content div {
+  max-width: none;
+}
+
+.nested-collapsible .collapsible-content {
+  width: 100%;
+  display: block;
+}
+
+.triangle-icon {
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+  color: #1fbfff;
 }

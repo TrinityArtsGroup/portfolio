@@ -1,8 +1,3 @@
-body {
-  background: url('game.png') no-repeat center center fixed;
-  background-size: cover;
-}
-
 main.section {
   max-width: 1000px;
   margin: 3rem auto;

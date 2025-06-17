@@ -1,51 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Selection of Various Color Themes</title>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="nav.css">
-  <link rel="stylesheet" href="sitewide.css">
-  <link rel="stylesheet" href="color/themes.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalism vs. Maximalism in Web Page Design</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="color/themes.css">
   <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
+  <script src="site_nav.js" defer></script>
 </head>
 <body>
-<header class="nav-container">
+<nav class="nav-container" role="navigation" aria-label="Main">
   <div class="logo-container">
-    <img src="images/logo.png" alt="Trinity Arts Group Logo" class="nav-logo">
+    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo">
   </div>
-  <nav class="main-nav">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="audio.html">Audio</a></li>
-      <li><a href="design.html">Design</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li class="dropdown">
-        <a href="showcase.html">Showcase</a>
-        <ul class="dropdown-menu">
-          <li><a href="game.html">Game Screen</a></li>
-          <li class="dropdown-sub">
-            <a href="color-theory.html">Color Theory</a>
-            <ul class="dropdown-submenu">
-              <li><a href="color-themes.html">Various Color Themes</a></li>
-              <li><a href="color-article.html">Web Page Article</a></li>
-            </ul>
-          </li>
-          <li class="dropdown-sub">
-            <a href="typography.html">Typography</a>
-            <ul class="dropdown-submenu">
-              <li><a href="font-types.html">Article on Font Types</a></li>
-              <li><a href="typo-article.html">Typography Article</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="theatre.html">Theatre</a></li>
-      <li><a href="video.html">Video</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="nav-controls">
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer-bg" tabindex="-1"></div>
+<nav class="nav-drawer" aria-label="Main navigation" tabindex="-1">
+  <div class="nav-drawer-header">
+    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo" class="drawer-logo">
+    <button class="drawer-close" aria-label="Close navigation">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="audio.html">Audio</a></li>
+    <li><a href="design.html">Design</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li>
+      <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+        Class Portfolio <i class="fa-solid fa-plus"></i>
+      </button>
+      <div class="drawer-dropdown">
+        <a class="drawer-dropdown-link" href="showcase.html">Adobe Showcase</a>
+        <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
+        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Color Theory <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown">
+          <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
+          <a class="drawer-dropdown-link" href="color-themes.html" class="active" aria-current="page">Various Color Themes</a>
+          <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
+        </div>
+        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+          Typography <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown">
+                  <a class="drawer-dropdown-link" href="typography.html">Typography Primer</a>
+          <a class="drawer-dropdown-link" href="font-types.html">Article on Font Types</a>
+          <a class="drawer-dropdown-link" href="typo-article.html">Typography Article</a>
+        </div>
+      </div>
+    </li>
+    <li><a href="theatre.html">Theatre</a></li>
+    <li><a href="video.html">Video</a></li>
+  </ul>
+    <div class="drawer-controls">
+      <button class="font-toggle-btn" aria-label="Toggle font size">
+      <i class="fa-solid fa-font"></i>
+    </button>
+    <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    </div>
+</nav>
 
 <main class="readable-overlay">
   <h1>A Selection of Various Color Themes</h1>
@@ -147,7 +172,7 @@
     <div class="footer-info">
       <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
       <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
-      <p><i class="fa-regular fa-copyright"></i> 2025 Patrick Flynn. All rights reserved.</p>
+      <p><i class="fa-regular fa-copyright"></i> 2025 Trinity Arts Group LLC. All rights reserved.</p>
     </div>
   </div>
 </footer>

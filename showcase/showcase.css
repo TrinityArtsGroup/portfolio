@@ -1,8 +1,3 @@
-body {
-  background: url('showcase.png') no-repeat center center fixed;
-  background-size: cover;
-}
-
 .card-image {
   width: 100%;
   height: auto;
