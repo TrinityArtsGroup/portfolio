@@ -74,7 +74,7 @@ body.drawer-open .nav-container {
 /* === NAVIGATION === */
 .nav-container {
   background: rgba(20, 20, 20, 0.72);
-  height: var(--nav-height 84px);
+  height: var(--nav-height, 84px);
   padding: 0 2rem 0 1.5rem;
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -778,7 +778,7 @@ footer {
   .styled-table td {
     padding: 0.6rem;
     font-size: 0.9rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .footer-container {
