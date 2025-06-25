@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Musical Examples</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="sitewide.css">    
-    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
-    <script src="site_nav.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="sitewide.css">
+  <link rel="stylesheet" href="contact/contact.css">
+  <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
+  <script src="site_nav.js" defer></script>
+  <script src="contact/contact.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <nav class="nav-container" aria-label="Main">
@@ -35,7 +38,7 @@
   </div>
   <ul class="nav-drawer-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="audio.html" class="active" aria-current="page">Audio</a></li>
+    <li><a href="audio.html">Audio</a></li>
     <li><a href="design.html">Design</a></li>
     <li><a href="resume.html">Resume</a></li>
     <li>
@@ -71,7 +74,7 @@
     </li>
     <li><a href="theatre.html">Theatre</a></li>
     <li><a href="video.html">Video</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
   </ul>
     <div class="drawer-controls">
       <button class="font-toggle-btn" aria-label="Toggle font size">
@@ -82,60 +85,67 @@
     </button>
     </div>
 </nav>
-
-<main class="readable-overlay">
-<section class="wrap-section only-text">
-  <h2>Audio Examples</h2>
-  <p>Below are some audio examples of my work in various musical projects. Each entry includes a brief description and an audio player to listen 
-  to the track.</p>
-</section>
-
-<section class="wrap-section">
-  <a href="https://colourtelevision.bandcamp.com/album/locked-out" target="_blank">
- <img src="audio/colourtv.png" alt="Colour T.V." class="side-image glow-hover"></a>
-  <div>
-  <h3><em>Colour T.V. - "Locked Out"</em></h3>
-  <p>Colour T.V. was an alternative group out of Sussex County, NJ. I previously played with 2/3rd's of the group in a different project called 
-  "Young American Artists". I designed the album artwork in the style of JD Salinger's paperback covers.</p>
-  <audio src="audio/lockedout.mp3" controls></audio>
-  </div>
-</section>
-
-<section class="wrap-section">
-  <img src="audio/datura.jpg" alt="Datura" class="side-image">
-  <div>
-  <h3><em>Datura - "Crossed"</em></h3>
-  <p>Datura was a post-rock band formed while attending the School of Visual Arts. I played bass and did background vocals. Datura was a frequent 
-  presence at the now defunct bar Don Hills in the Bowery district of New York City. I left the group in 2009 to focus on working in the theatre 
-  company, Dangerous Ground Productions.</p>
-  <audio src="audio/crossed.mp3" controls></audio>
-  </div>
-  </section>
-
-  <section class="wrap-section">
-    <a href="https://spanishdracula.bandcamp.com/album/spanish-dracula" target="_blank">
-    <img src="audio/spanishdracula.png" alt="Spanish Dracula" class="side-image glow-hover"></a>
-    <div>
-    <h3><em>Spanish Dracula - "Paint Me a Picture"</em></h3>
-    <p>Spanish Dracula was the brain child of my brother, Christopher. After being impressed with an earlier project of mine (the punk rock group Aguirre) 
-    he invited me to sing and write in this alternative / grunge quartet. We played frequently over the NY area, and released three EP's before falling 
-    victim to the COVID pandemic, when some members moved out of state.</p>
-    <audio src="audio/picture.mp3" controls></audio>
+  <main class="readable-overlay">
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+    <section>
+    <h2>About Me</h2>
+    <div class="aboutme-flex">
+      <p><img src="contact/aboutme.png" alt="Patrick Flynn" class="aboutme-img">
+      My name is Patrick Flynn, and I am a filmmaker, musician, and artist working in the media industry for the last ten years. In that time, I have 
+      written and directed documentary features, narrative short films, and plays for the stage. I have written multiple screenplays, and produced and 
+      recorded music across a variety of genres. I have worked as a video editor for NBC-Universal, edited narrative feature films, and done extensive 
+      Blu-ray editing for several releases. Since 2020, I have also pursued acrylics and collage on canvas. Several of my works have been recommissioned 
+      due to demand.</p>
     </div>
   </section>
+  <section>
+    <h2>Contact Form</h2>
+    <div class="form-container">
+    <form id="contactForm" action="https://formspree.io/f/manjpddn" method="POST">
+    <div class="form-row">
+      <div class="form-group half-width">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required />
+    </div>
+    <div class="form-group half-width">
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required />
+     </div>
+    </div>
+      <label for="email">Email:</label>
+      <input type="email" name="_replyto" id="email" required>
 
- <section class="wrap-section">
-    <img src="audio/oldmanisme.JPG" alt="Old Man is Me" class="side-image">
-    <div>
-    <h3><em>Old Man is Me - "Buffalo Skinners"</em></h3>
-    <p>Old Man is Me reunited me with my former bandmate Paul Alan (of Aguirre and Colour T.V.) with a focus on blues and folk music. Recording started in as 
-    early as 2020. The video below was edited utilizing public domain footage, and is an alternative arrangement of the folk standard "Buffalo Skinners" first 
-    performed by Leadbelly in the 1900s, and popularized by Pete Seeger during the folk revival of the early 1960s.</p>
-   <video src="audio/buffalo.mp4" controls height="480" width="640"></video>
-   </div>
-  </section>
-</main>
-<footer>
+      <label for="inquiry">Inquiry Type:</label>
+      <select name="inquiry" id="inquiry" required>
+        <option value="">-- Please Choose --</option>
+        <option>Art Commission</option>
+        <option>Branding Opportunities</option>
+        <option>Film Transfers</option>
+        <option>Photo Restoration</option>
+        <option>Tape Digitization</option>
+        <option>Project Funding</option>
+        <option>Theatrical Collaboration</option>
+        <option>Other</option>
+      </select>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+
+      <div class="g-recaptcha" data-sitekey="6LcdBGsrAAAAADFzSXfz3AcuN39HHYsaSikzNlMj"></div>
+
+      <button id="submit-btn" class="blue-btn inline-btn">Send Message</button>
+    </form>
+
+    <div id="thankYouMessage" style="display: none; padding-top: 20px;">
+      <h2>Thank you!</h2>
+      <p>Your message has been sent. We'll be in touch shortly.</p>
+    </div>
+    </div>
+    </section>
+  </main>
+  <footer>
   <hr>
   <div class="footer-container">
     <img src="images/logo.png" alt="Logo" class="footer-logo">

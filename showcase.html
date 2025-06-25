@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="sitewide.css">
     <link rel="stylesheet" href="showcase/showcase.css">
-    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
+    <script src="showcase/showcase.js" defer></script>
     <script src="site_nav.js" defer></script>
 </head>
 <body>
-<nav class="nav-container" aria-label="Main">
+  <nav class="nav-container" aria-label="Main">
   <div class="logo-container">
     <a href="index.html">
     <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo">
@@ -44,14 +45,21 @@
         Class Portfolio <i class="fa-solid fa-plus"></i>
       </button>
       <div class="drawer-dropdown">
-        <a class="drawer-dropdown-link active" href="showcase.html" aria-current="page">Adobe Showcase</a>
-        <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
+        <a class="drawer-dropdown-link" href="showcase.html" class="active" aria-current="page">Adobe Showcase</a>
         <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Color Theory <i class="fa-solid fa-plus"></i>
         </button>
         <div class="drawer-dropdown">
           <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
           <a class="drawer-dropdown-link" href="color-themes.html">Various Color Themes</a>
           <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
+        </div>
+        <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
+        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+        Interactive Quizzes<i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown">
+          <a class="drawer-dropdown-link" href="quiz-us-history.html">U.S. History Quiz</a>
+          <a class="drawer-dropdown-link" href="quiz-mine.html">Cinema History Quiz</a>
         </div>
         <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
           Typography <i class="fa-solid fa-plus"></i>
@@ -65,6 +73,7 @@
     </li>
     <li><a href="theatre.html">Theatre</a></li>
     <li><a href="video.html">Video</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
   </ul>
     <div class="drawer-controls">
       <button class="font-toggle-btn" aria-label="Toggle font size">
@@ -81,68 +90,66 @@
   <p>Welcome to my showcase page! Here, you can explore various projects I've completed during my time at Rutgers. Each project reflects my learning journey and the skills I've developed 
   in design, animation, and restoration.</p>
 
-  <section class="wrap-section">
-  <div class="wrap-inline">
-  <h2>Business Card</h2>
-  <div class="wrap-inline">
-    <label class="image-toggle-card glow-hover">
-      <input type="checkbox">
-      <img src="showcase/card1.png" alt="Card Front" class="card-image front">
-      <img src="showcase/card2.png" alt="Card Back" class="card-image back">
-    </label>
-    <p>I cannibalized the logo of an earlier production company I had as brand marker for the front of the card. I utilized Adobe Stock to download a template that matched the overarching style
-    of the company (which is meant to evoke nostalgia, as the business is geared towards film and negative restoration and digital transfers). Hover over the front card image to see the reverse.</p>
+  <section class="showcase-item">
+  <h1>Business Card</h1>
+  <div class="wrap-section">
+  <div class="media-column">
+  <div class="card-wrapper">
+  <img src="showcase/card1.png" alt="Business Card Front" class="card front">
+  <img src="showcase/card2.png" alt="Business Card Back" class="card back">
+  </div>
+  </div>
+  <div class="text-column">
+    <p>I seized upon the opportunity to be able to market my unique skillset and talent to the largest possible audience. In doing so, I thought deeply on the legacy of the brand 
+    as the name “Trinity” was my father’s pipefitting business for 30+ years. I also considered the history New Jersey has in film. I began by first cannibalizing the logo of 
+    an earlier production company I had, as a marker for the front card, with the updated logo on the reverse. I utilized a gold and black palette to evoke nostalgia as the business 
+    is geared towards archival restorations of film negatives, photo restorations, and digital transfers. <br><br>
+    <em><strong><u>Hover over the card image to see the reverse.</em></strong></u></p>
   </div>
   </div>
   </section>
 
-  <section class="wrap-section">
-    <div class="wrap-inline">
+  <section class="showcase-item">
+    <div class="wrap-section">
+    <div class="media-column">
+      <video class="showcase-video" controls>
+      <source src="showcase/final-project-no-1.mp4" type="video/mp4"></video>
+    </div>
+    <div class="text-column">
     <h2><em>"A Tug of War"</em>- Adobe Animate Example</h2>
-    <div class="wrap-inline">
-    <video controls width= "250" class="card-video">
-    <source src="showcase/final-project-no-1.mp4" type="video/mp4"></video>
-    <p> By utilizing two elements I’ve used previously in the course, I tried to come up with a simple, clear, and funny little animation. Through classic tweening, I made two 4 second 
-    loops to simulate the back-and-forth pushing and pulling the turkey was doing. I did likewise for the elephant’s back and forth movement. I was aiming for an Abbott and Costello, or 
-    Laurel and Hardy type feeling, and hopefully I’ve achieved it.</p>
+    <p> I started by breaking down two assets I had used previously in the Animate course into individual rigs. Through a combination of classic tweening, and public domain materials 
+    I tried to come up with a simple, clear, and funny little animation. I made two 4 second loops to simulate the back-and-forth pushing and pulling the turkey was doing. I then did 
+    likewise for the elephant’s back and forth movement. I was aiming for an Abbott and Costello, or Laurel and Hardy type feeling, and hopefully I’ve achieved it.</p>
     </div>
     </div>
    </section>
 
-      <section class="wrap-section">
-      <div class="wrap-inline">
-      <h2>Photo Restoration</h2>
-      <div class="wrap-inline">
-    <label class="image-toggle-photo glow-hover">
-      <input type="checkbox">
-      <img src="showcase/before.png" alt="Before Photo Restoration" class="card-image front">
-      <img src="showcase/after.png" alt="After Photo Restoration" class="card-image back">
-    </label>
-    <p>This project meant a lot to me, as I chose for this restoration a baby photo of my maternal grandfather: Warren Seward Hopkins. It was so exciting to learn a bit more about my 
-    mother’s side of the family – while simultaneously getting the best photo for the project’s needs.</p>
-    </div>
-    </div>
-   </section>
+<section class="showcase-item photo-restore-exact">
+  <h2>Photo Restoration</h2>
+  <div class="img-compare-container" id="img-compare">
+    <img src="showcase/before1.png" alt="Before Restoration" class="img-compare-img img-compare-before">
+    <img src="showcase/after1.png" alt="After Restoration" class="img-compare-img img-compare-after">
+    <div class="img-compare-slider" id="img-slider"></div>
+  </div>
+  <p>This project meant a lot to me, as I chose for this restoration a baby photo of my maternal grandfather: Warren Seward Hopkins. It was so exciting to learn a bit more about my Mother’s side of 
+  the family – while simultaneously getting the best photo for the project’s needs. This was, I believe, an old linotype photo that was from a disintegrating photo album – however it was an album, 
+  I learned, that was literally hand compiled and annotated by my grandfather himself, written in his hand and by his old typewriter. The unique discoloring on the sides from the degrading masking 
+  tape, the photo album fibers surrounding it, the extensive cracking, pinholes, and scratches on the print made it a suitable example to restore. </p>
+  </section>
 
-  <section class="wrap-section">
-  <div class="wrap-inline">
-    <h2><em>"Fantomas"</em> Magazine Cover</h2>
-  <div class="wrap-inline">
-    <img src="showcase/mag.jpg" alt="Magazine Cover" class="side-image">
-    <p>I remember seeing a poster for the forgotten 1931 thriller Fantomas in one of the auditoriums at the School of Visual Arts and the logotype always stuck with me, as did the name. I took that kernel of an idea and ran with it – exploring my latest interests with the undersung classic comedian Buster Keaton, in his many hats as actor, director, writer and stunt person – as well as the author Charles Beaumont and the near completely forgotten 1960’s television artist and actor-writer Ernie Kovacs. The main image utilized is a publicity photo of Buster Keaton taken on set of his famous 1928 film <em>"The Cameraman"</em>, now in the public domain.</p>
-  </div>
-  </div>
-</section>
+  <section class="showcase-item">
+    <h1><em>"Fantomas"</em> Magazine Cover</h1>
+    <img src="showcase/mag.jpg" alt="Magazine Cover">
+    <p>I remember seeing a poster for the forgotten 1931 thriller Fantomas in one of the auditoriums at the School of Visual Arts and the logotype always stuck with me, as did the name. I took
+    that kernel of an idea and ran with it – exploring my latest interests with the undersung classic comedian Buster Keaton, in his many hats as actor, director, writer and stunt person – as 
+    well as the author Charles Beaumont and the near completely forgotten 1960’s television artist and actor-writer Ernie Kovacs. The main image utilized is a publicity photo of Buster Keaton 
+    taken on set of his famous 1928 film <em>"The Cameraman"</em>, now in the public domain.</p>
+  </section>
 
-<section class="wrap-section">
-  <div class="wrap-inline">
-    <h2>Social Media Ad</h2>
-    <div class="wrap-inline">
-    <img src="showcase/social-ad.jpg" alt="Ad Graphic" class="side-image">
-    <p>I thought deeply on the legacy of the brand name (the name “Trinity” was my father’s pipefitting business for 30+ years), the history New Jersey has in film (motion pictures originated in New Jersey), how individual fonts can evoke specific emotions, and how taglines can imprint themselves upon demographics. As the saying goes, “brevity is the soul of wit”.</p>
-  </div>
-  </div>
-</section>
+  <section class="showcase-item">
+    <h1>Social Media Ad</h1>
+    <img src="showcase/social-ad.jpg" alt="Ad Graphic">
+  </section>
   
 </main>
 <footer>

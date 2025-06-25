@@ -315,9 +315,35 @@ body.drawer-open .nav-container {
 .drawer-dropdown {
   display: none;
   padding-left: 1.5rem;
-  margin-top: 0.2em;
-  margin-bottom: 0.3em;
   animation: dropdown-fadein 0.17s both;
+}
+
+.drawer-dropdown.open {
+  display: block;
+}
+
+.drawer-dropdown > li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.05em !important;
+}
+
+.drawer-dropdown-link {
+  font-size: 1.07rem;
+  color: #eee;
+  background: none;
+  border: none;
+  padding-top: 0.25em;
+  padding-bottom: 0 !important;
+  padding-right: 0.45em;
+  padding-left: 1.5em;
+  display: block;
+  font-family: inherit;
+  border-radius: 5px;
+  margin-bottom: 0.05em;
+  transition: color 0.15s, font-weight 0.15s, background 0.15s;
+  cursor: pointer;
+  text-align: left;
 }
 
 .drawer-dropdown > .drawer-dropdown-link,
@@ -335,23 +361,6 @@ body.drawer-open .nav-container {
 .drawer-dropdown .drawer-dropdown .drawer-dropdown .drawer-dropdown-link {
   font-size: 0.85rem;
   padding-left: 2.8em;
-}
-
-.drawer-dropdown.open { display: block; }
-.drawer-dropdown-link {
-  font-size: 1.07rem;
-  padding-left: 1.7em;
-  color: #eee;
-  background: none;
-  border: none;
-  padding: 0.17em 0.45em;
-  display: block;
-  font-family: inherit;
-  border-radius: 5px;
-  margin-bottom: 0.13em;
-  transition: color 0.15s, font-weight 0.15s, background 0.15s;
-  cursor: pointer;
-  text-align: left;
 }
 
 .drawer-dropdown-link:hover,
@@ -435,6 +444,7 @@ body.drawer-open .nav-container {
   padding: 1.6em 0 0.8em 0;
   border-top: 1px solid #2222;
 }
+
 .drawer-controls button,
 .font-toggle-btn, .theme-toggle-btn {
   min-width: 44px;
@@ -452,7 +462,6 @@ body.drawer-open .nav-container {
   box-sizing: border-box;
   transition: color 0.18s, background 0.18s;
 }
-
 
 .drawer-controls button:hover,
 .drawer-controls button:focus,
@@ -476,13 +485,11 @@ body.drawer-open .nav-container {
   font-size: 0.8rem;
 }
 
-
 .theme-toggle:hover,
 .font-toggle:hover {
   background-color: transparent;
   border-color: gold;
   color: var(--text-color);
-
 }
 
 /* === STICKY HEADER === */
@@ -500,10 +507,18 @@ body.drawer-open .nav-container {
 }
 
 /* === GLOBAL STYLES === */
+h1, h2 {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid goldenrod;
+  border-radius: 4px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ancizar Sans', sans-serif;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0.5px 0.5px 2px goldenrod;
   line-height: 1.2;
   color: var(--heading-color);
 }
@@ -582,12 +597,6 @@ p {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
-.readable-overlay::after {
-  content: '';
-  display: block;
-  height: 2rem;
-}
-
 .readable-overlay a {
   color: white;
 }
@@ -650,6 +659,7 @@ p {
 
 .blue-btn.inline-btn:hover {
   background-color: #007acc;
+  color: gold;
 }
 
 /* === MEDIA ELEMENTS === */

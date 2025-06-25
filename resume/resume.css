@@ -65,7 +65,11 @@ main.resume-box {
 }
 
 .triangle-icon {
+  font-size: inherit;
   transition: transform 0.3s ease;
-  font-size: 0.9rem;
   color: #1fbfff;
+}
+
+.nested-collapsible .triangle-icon {
+  font-size: 0.9em;
 }

@@ -1,0 +1,51 @@
+.question {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: background-color 0.3s;
+}
+.question:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.question p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.question h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.question label {
+  display: block;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.question input[type="checkbox"],
+.question input[type="radio"] {
+  margin-right: 0.5rem;
+  transform: scale(1.1);
+}
+
+.correct {
+  color: #6cff8f;
+  border-left: 5px solid limegreen;
+}
+
+.incorrect {
+  color: #ff5e5e;
+  border-left: 5px solid red;
+}
+
+.score-display {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ffc107;
+}
