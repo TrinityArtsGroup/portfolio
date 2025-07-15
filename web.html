@@ -1,0 +1,132 @@
+<!-- Replace your existing slideshow section with this -->
+<section class="mb-5">
+  <h2 class="section-title">Project Gallery</h2>
+  
+  <div id="projectShowcase" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#projectShowcase" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    
+    <div class="carousel-inner">
+      <!-- Image Slide -->
+      <div class="carousel-item active">
+        <img src="media/web/gallery/OOTB-iTunes.png" class="d-block w-100" alt="Out of the Blue GFX">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Out of the Blue iTunes Graphics</h5>
+          <p>Custom graphics package for indie film</p>
+        </div>
+      </div>
+      
+      <!-- Video Slide -->
+      <div class="carousel-item">
+        <video class="d-block w-100" muted loop>
+          <source src="media/web/gallery/OOTB RECUT TRAILER.mp4"video>
+        </video>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Out of the Blue Restoration Trailer</h5>
+          <p>40th Anniversary 4K Re-Release Trailer of Dennis Hopper's 1982 film "Out of the Blue".</p>
+        </div>
+      </div>
+      
+      <!-- Image Slide -->
+      <div class="carousel-item">
+        <img src="media/web/gallery/guilty.jpg" class="d-block w-100" alt="Guilty Conscience Poster">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Guilty Conscience</h5>
+          <p>Poster design for the 2022 feature "Guilty Conscience".</p>
+        </div>
+      </div>
+      
+      <!-- Image Slide -->
+      <div class="carousel-item">
+        <img src="media/web/slideshow/eskimo.png" class="d-block w-100" alt="Sit Back Sally EP">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Inupiatun - In the Manner of the Eskimo Blu Ray Art</h5>
+          <p>Disc and cover art work / branding for Harold Tichenor's lauded Canadian documentary "Inupiatun: In the Manner of the Eskimo" (1982).</p>
+        </div>
+      </div>
+      
+       <!-- Image Slide -->
+      <div class="carousel-item">
+        <img src="media/web/slideshow/eskimo disc.png" class="d-block w-100" alt="Sit Back Sally EP">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Inupiatun - In the Manner of the Eskimo Blu Ray Art</h5>
+          <p>Disc and cover art work / branding for Harold Tichenor's lauded Canadian documentary "Inupiatun: In the Manner of the Eskimo" (1982).</p>
+        </div>
+      </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#projectShowcase" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#projectShowcase" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+<style>
+.carousel-item video {
+  object-fit: cover;
+  height: 400px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 400px;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.carousel-caption h5 {
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  color: #e5d295;
+  margin-bottom: 0;
+}
+</style>
+
+<script>
+// Auto-play videos when they become active
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('#projectShowcase');
+  
+  carousel.addEventListener('slide.bs.carousel', function(event) {
+    // Pause all videos
+    const videos = carousel.querySelectorAll('video');
+    videos.forEach(video => {
+      video.pause();
+    });
+  });
+  
+  carousel.addEventListener('slid.bs.carousel', function(event) {
+    // Play video in active slide
+    const activeSlide = carousel.querySelector('.carousel-item.active');
+    const video = activeSlide.querySelector('video');
+    
+    if (video) {
+      video.currentTime = 0; // Reset to beginning
+      video.play().catch(e => console.log('Video autoplay prevented'));
+    }
+  });
+  
+  // Play video in initial active slide
+  const initialVideo = carousel.querySelector('.carousel-item.active video');
+  if (initialVideo) {
+    initialVideo.play().catch(e => console.log('Video autoplay prevented'));
+  }
+});
+</script>

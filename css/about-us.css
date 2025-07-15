@@ -1,0 +1,338 @@
+
+    .hero-section {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+      color: #e5d295;
+      padding: 120px 0 80px;
+      margin-top: 80px;
+    }
+    
+    .hero-title {
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    
+    .hero-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    }
+    
+    .content-section {
+      padding: 80px 0;
+      background: rgba(255,255,255,0.95);
+      color: #333;
+    }
+    
+    .section-title {
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .section-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      color: #666;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .service-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .service-icon {
+      font-size: 3rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+    
+    .service-title {
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .service-description {
+      font-family: 'Inter', sans-serif;
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .pricing-table {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+    
+    .pricing-table .table {
+      margin-bottom: 0;
+    }
+    
+    .pricing-table .table th {
+      background: #ffd700;
+      color: #333;
+      font-weight: 700;
+      border: none;
+      padding: 1rem;
+    }
+    
+    .pricing-table .table td {
+      padding: 1rem;
+      border-color: rgba(0,0,0,0.1);
+      vertical-align: middle;
+    }
+    
+    .pricing-table .table tbody tr:hover {
+      background: rgba(255,215,0,0.1);
+    }
+    
+    .project-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .project-content {
+      padding: 2rem;
+    }
+    
+    .project-title {
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    
+    .project-description {
+      font-family: 'Inter', sans-serif;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    
+    .project-award {
+      background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+      color: #333;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #333 0%, #1a1a1a 100%);
+      color: #e5d295;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .cta-title {
+      font-family: 'Sorts Mill Goudy', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-description {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .btn-custom {
+      background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+      color: #333;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255,215,0,0.3);
+      color: #333;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .service-card,
+      .project-card {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    /* ABOUT-US SPECIFIC ONLY */
+.hero-section {
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+  color: #e5d295;
+  padding: 120px 0 80px;
+  margin-top: 80px;
+}
+
+.content-section {
+  padding: 80px 0;
+  background: rgba(255,255,255,0.95);
+  color: #333;
+}
+
+.project-award {
+  background: linear-gradient(135deg, #ffd700 0%, #e6c200 100%);
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sorts Mill Goudy', serif;
+  color: var(--heading-color);
+  text-shadow: 0.5px 0.5px 2px goldenrod;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+h2.section-header-start {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 0.5rem;
+}
+
+h2.section-header-end {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: end;
+  margin-bottom: 0.5rem;
+}
+
+.section-header + .border {
+  border-color: var(--gold);
+}
+
+.section-title {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: gold;
+}
+
+.article p {
+  text-indent: 1.5em;
+  text-align: justify;
+}
+
+p {
+  text-indent: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: start;
+}
+
+.section-header {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--heading-color);
+  text-align: right;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid var(--gold);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.section-bg {
+  background-color: var(--overlay-bg);
+  color: var(--overlay-text);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.section-bg p,
+.section-bg a {
+  color: var(--overlay-text);
+}
+
+.section-bg a:hover {
+  color: var(--gold);
+}
+
+.styled-table td img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}

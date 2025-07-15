@@ -1,0 +1,1194 @@
+/**
+ * Component-specific styles for Trinity Arts Group
+ * Handles contact form, gallery, and other component styling
+ */
+
+/* --- CONTACT HERO SECTION SPACING --- */
+.contact-hero {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* --- CONTACT FORM FONT COLOR & CONTAINMENT --- */
+  .contact-form {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 0 !important;
+    height: 100%;
+    color: #222 !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Fix contact form column to fit entire section */
+  .col-md-6.d-flex.align-items-stretch.px-0 {
+    display: flex !important;
+    align-items: stretch !important;
+    height: 100%;
+    padding: 0 !important;
+  }
+  
+  .contact-hero .row {
+    flex-wrap: nowrap;
+    height: 100%;
+    margin: 0 !important;
+  }
+  
+  @media (max-width: 991px) {
+    .contact-hero .row {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .contact-title {
+    color: #333;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-control,
+  .form-select {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    background: #fff;
+    border-color: #ffd700;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25);
+  }
+  
+  .form-control::placeholder {
+    color: #666;
+  }
+  
+  /* Button styling - PREVENT FLATTENING */
+  button.btn.btn-outline-gold,
+  .btn.btn-outline-gold,
+  .btn-outline-gold {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: #e5d295 !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+  }
+  
+  button.btn.btn-outline-gold:hover, 
+  button.btn.btn-outline-gold:focus,
+  .btn.btn-outline-gold:hover, 
+  .btn.btn-outline-gold:focus,
+  .btn-outline-gold:hover, 
+  .btn-outline-gold:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    border-radius: 8px !important;
+    transform: none !important;
+    box-shadow: none !important;
+    padding: 12px 24px !important;
+  }
+  
+  button.btn.btn-outline-gold:active,
+  .btn.btn-outline-gold:active,
+  .btn-outline-gold:active {
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+  }
+  
+  /* Contact image improvements */
+  .contact-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    filter: brightness(0.8) contrast(1.1);
+  }
+  
+  /* Form Validation Styles */
+  .form-control.is-valid,
+  .form-select.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='m2.3 6.73.94-.94 2.89 2.89 2.89-2.89.94.94L6.12 9.62z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+  
+  .form-control.is-invalid,
+  .form-select.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 4.6 1.4 1.4M7.2 4.6l-1.4 1.4'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+  
+  /* Button Loading State */
+  .btn-loading {
+    display: none;
+  }
+  
+  .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+  /* Gallery Animation */
+  /* --- GALLERY TRANSITION --- */
+  .masonry-wrapper {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(.4,0,.2,1), transform 1s cubic-bezier(.4,0,.2,1);
+    position: relative;
+  }
+  .masonry-wrapper.slide-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .masonry-card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .masonry-wrapper.slide-up .masonry-card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(1) { transition-delay: 0.1s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(2) { transition-delay: 0.2s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(3) { transition-delay: 0.3s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(4) { transition-delay: 0.4s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(5) { transition-delay: 0.5s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(6) { transition-delay: 0.6s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(7) { transition-delay: 0.7s; }
+  .masonry-wrapper.slide-up .masonry-card:nth-child(8) { transition-delay: 0.8s; }
+  
+  /* Masonry Grid Improvements */
+  .masonry-grid {
+    margin: 0 auto;
+  }
+  
+  .masonry-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .masonry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .masonry-card .card {
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  .masonry-card .card-img {
+    transition: transform 0.3s ease;
+  }
+  
+  .masonry-card:hover .card-img {
+    transform: scale(1.05);
+  }
+  
+  /* Hero Carousel Improvements */
+  .hero-carousel-section {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-img {
+    object-fit: cover;
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  /* --- HERO CAROUSEL CAPTION --- */
+  .carousel-caption {
+    background: rgba(0,0,0,0.05); /* nearly invisible, just enough for contrast */
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+  }
+  
+  .hero-tagline {
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+  }
+  
+  
+  /* Modal improvements */
+  /* --- THANK YOU MODAL REDESIGN --- */
+  .custom-thankyou-modal {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    border: 2px solid #ffd700 !important;
+    border-radius: 0 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+    color: #fff !important;
+  }
+  
+  /* Modal backdrop */
+  .modal-backdrop.show {
+    opacity: 0.8 !important;
+    background-color: #000 !important;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #ffd700 !important;
+    padding: 1.5rem !important;
+    background: transparent !important;
+  }
+  
+  .modal-title {
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+  }
+  
+  .modal-body {
+    padding: 2rem 1.5rem !important;
+    color: #fff !important;
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+  
+  .modal-body p {
+    margin: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+  }
+  
+  /* MAXIMUM SPECIFICITY for modal close button - REMOVE BLUE SQUARE */
+  button.custom-close,
+  .custom-close,
+  .modal-header .custom-close {
+    background: none !important;
+    border: none !important;
+    font-size: 1.8rem !important;
+    color: #fff !important;
+    transition: color 0.3s ease !important;
+    padding: 0.5rem !important;
+    border-radius: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    position: relative !important;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  
+  button.custom-close::before,
+  .custom-close::before,
+  .modal-header .custom-close::before {
+    content: "×" !important;
+    font-size: 2rem !important;
+    line-height: 1 !important;
+    color: #fff !important;
+  }
+  
+  button.custom-close:hover,
+  button.custom-close:focus,
+  .custom-close:hover,
+  .custom-close:focus,
+  .modal-header .custom-close:hover,
+  .modal-header .custom-close:focus {
+    color: #ffd700 !important;
+    background: none !important;
+    transform: none !important;
+  }
+  
+  button.custom-close:hover::before,
+  button.custom-close:focus::before,
+  .custom-close:hover::before,
+  .custom-close:focus::before,
+  .modal-header .custom-close:hover::before,
+  .modal-header .custom-close:focus::before {
+    color: #ffd700 !important;
+  }
+  
+  button.custom-close:focus,
+  .custom-close:focus,
+  .modal-header .custom-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Responsive Improvements */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-tagline {
+      font-size: 1rem;
+    }
+    
+    .carousel-caption {
+      padding: 1rem;
+    }
+    
+    .contact-form {
+      padding: 1.5rem 0.5rem !important;
+      margin: 1rem 0;
+    }
+    .site-footer {
+      flex-direction: column;
+      min-height: auto;
+      align-items: stretch;
+    }
+    .footer-logo {
+      padding: 1rem;
+      justify-content: center;
+      height: auto;
+    }
+    
+    .footer-logo img {
+      max-height: 50px;
+    }
+    
+    .footer-contact {
+      padding: 1rem;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .footer-phone {
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-title {
+      font-size: 1.5rem;
+    }
+    
+    .hero-tagline {
+      font-size: 0.9rem;
+    }
+    
+    .masonry-card {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    .masonry-wrapper,
+    .masonry-card,
+    .carousel-caption,
+    .nav-container {
+      transition: none;
+    }
+    
+    .masonry-card:hover {
+      transform: none;
+    }
+    
+    .masonry-card:hover .card-img {
+      transform: none;
+    }
+  }
+  
+  /* Focus styles for better accessibility */
+  .nav-toggle:focus,
+  .drawer-close:focus,
+  .drawer-dropdown-trigger:focus,
+  .font-toggle-btn:focus,
+  .theme-toggle-btn:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* --- CONTACT FORM VALIDATION --- */
+  .form-control.is-invalid,
+  .form-select.is-invalid {
+    border-color: #dc3545;
+    background-image: none;
+  }
+  
+  .invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.95em;
+    margin-top: 0.25rem;
+  }
+  
+  .was-validated .form-control:invalid, .form-control.is-invalid {
+    background-color: #fff0f0;
+  }
+  
+  /* Print styles */
+  @media print {
+    .nav-container,
+    .nav-drawer,
+    .carousel-indicators,
+    .contact-form {
+      display: none !important;
+    }
+    
+    .hero-carousel-section {
+      height: auto;
+    }
+    
+    .hero-img {
+      height: auto;
+      max-height: 400px;
+    }
+  } 
+  
+  /* --- CONTACT PHOTO COLUMN --- */
+  .contact-photo {
+    padding: 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  .contact-photo .contact-image {
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+  } 
+  
+  /* --- NAV ICONS & XMARK ALIGNMENT --- */
+  .nav-toggle i,
+  .drawer-close i {
+    font-size: 2rem !important;
+    line-height: 1;
+    vertical-align: middle;
+    display: inline-block;
+  } 
+  
+  /* --- GALLERY/FOOTER DEMARCATION --- */
+  .masonry-wrapper {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    box-shadow: none;
+  }
+  
+  .site-footer {
+    border-top: 3px solid #ffd700;
+  }
+  
+  /* --- FOOTER LOGO SIZE & CENTERING --- */
+  .footer-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  .footer-logo img {
+    max-height: 90px;
+    min-height: 60px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+  
+  /* --- GALLERY MODAL STYLES --- */
+  .gallery-modal {
+    background: rgba(20,20,20,0.98) !important;
+    color: #fff !important;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    padding: 2rem;
+    max-width: 90vw;
+    max-height: 90vh;
+    position: relative;
+    z-index: 2000;
+  }
+  .gallery-modal .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    z-index: 2010;
+    transition: color 0.2s;
+  }
+  .gallery-modal .modal-close:hover {
+    color: #ffd700;
+  }
+  .gallery-modal .modal-title {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .gallery-modal .modal-body {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  } 
+  
+  /* --- CONTACT SECTION WRAPPER --- */
+  .contact-hero {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .contact-section-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+  }
+  
+  /* --- FORM DROPDOWN COLORS --- */
+  .form-select {
+    background-color: #fff !important;
+    color: #333 !important;
+  }
+  
+  .form-select:focus {
+    background-color: #fff !important;
+    color: #333 !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25) !important;
+  }
+  
+  .form-select option {
+    background-color: #fff !important;
+    color: #333 !important;
+  }
+  
+  .form-select option:hover,
+  .form-select option:focus,
+  .form-select option:active {
+    background-color: #ffd700 !important;
+    color: #333 !important;
+  }
+  
+  .form-select option:checked {
+    background-color: #ffd700 !important;
+    color: #333 !important;
+  }
+  
+  /* --- FORM ERROR POPOVERS --- */
+  .error-popover {
+    background: #dc3545;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    max-width: 250px;
+    word-wrap: break-word;
+    position: absolute;
+    z-index: 1000;
+  }
+  
+  .error-popover::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #dc3545;
+  }
+  
+  /* --- FOOTER LOGO FULL NAV HEIGHT --- */
+  .site-footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 80px;
+    border-top: 3px solid #ffd700;
+  }
+  
+  .footer-logo {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 100%;
+  }
+  
+  .footer-logo img {
+    height: 120px !important; /* Much bigger */
+    width: auto !important;
+    display: block !important;
+    object-fit: contain !important;
+    max-width: none !important;
+  }
+  
+  .footer-contact {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align to bottom */
+    align-items: flex-end; /* Align to right */
+    padding: 1.5rem 2rem;
+    text-align: right;
+  }
+  
+  .footer-phone {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .footer-phone a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-phone a:hover {
+    color: #fff;
+  }
+  
+  .footer-copyright {
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 768px) {
+    .site-footer {
+      flex-direction: column;
+      min-height: auto;
+    }
+    
+    .footer-logo {
+      padding: 1rem;
+      justify-content: center;
+      height: auto;
+    }
+    
+    .footer-logo img {
+      height: 100px !important; /* Much bigger for mobile */
+    }
+    
+    .footer-contact {
+      padding: 1rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  } 
+  
+  /* --- CONTACT FORM STYLING --- */
+  .contact-form {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    color: #e5d295 !important;
+    padding: 2rem !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+  
+  .contact-title {
+    color: #e5d295 !important;
+    font-weight: 700 !important;
+  }
+  
+  .form-control, .form-select {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #e5d295 !important;
+    border-radius: 0 !important;
+  }
+  
+  .form-control::placeholder {
+    color: rgba(229, 210, 149, 0.7) !important;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25) !important;
+    color: #e5d295 !important;
+  }
+  
+  /* Force consistent background for ALL states - including autofill */
+  input.form-control,
+  textarea.form-control,
+  select.form-select,
+  input.form-control:-webkit-autofill,
+  input.form-control:-webkit-autofill:hover,
+  input.form-control:-webkit-autofill:focus,
+  input.form-control:-webkit-autofill:active,
+  textarea.form-control:-webkit-autofill,
+  textarea.form-control:-webkit-autofill:hover,
+  textarea.form-control:-webkit-autofill:focus,
+  textarea.form-control:-webkit-autofill:active,
+  select.form-select:-webkit-autofill,
+  select.form-select:-webkit-autofill:hover,
+  select.form-select:-webkit-autofill:focus,
+  select.form-select:-webkit-autofill:active,
+  select.form-select.form-select-gold,
+  select.form-select.form-select-gold:-webkit-autofill,
+  select.form-select.form-select-gold:-webkit-autofill:hover,
+  select.form-select.form-select-gold:-webkit-autofill:focus,
+  select.form-select.form-select-gold:-webkit-autofill:active {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e5d295 !important;
+    -webkit-text-fill-color: #e5d295 !important;
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05) inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+  
+  /* Override any browser default autofill styles */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:active,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus,
+  select:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05) inset !important;
+    -webkit-text-fill-color: #e5d295 !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+  
+  /* Force message textarea to have consistent background - AGGRESSIVE FIX */
+  textarea#message,
+  textarea#message.form-control,
+  textarea#message:-webkit-autofill,
+  textarea#message:-webkit-autofill:hover,
+  textarea#message:-webkit-autofill:focus,
+  textarea#message:-webkit-autofill:active,
+  textarea.form-control,
+  textarea.form-control:-webkit-autofill,
+  textarea.form-control:-webkit-autofill:hover,
+  textarea.form-control:-webkit-autofill:focus,
+  textarea.form-control:-webkit-autofill:active {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e5d295 !important;
+    -webkit-text-fill-color: #e5d295 !important;
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05) inset !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-image: none !important;
+    background-clip: content-box !important;
+    background-origin: content-box !important;
+  }
+  
+  /* COMPLETE TEXTAREA OVERRIDE - FIX ALL COLOR INCONSISTENCIES */
+  textarea,
+  textarea.form-control,
+  textarea#message,
+  textarea#message.form-control {
+    background: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-image: none !important;
+    color: #e5d295 !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05) inset !important;
+    -webkit-text-fill-color: #e5d295 !important;
+    background-clip: content-box !important;
+    background-origin: content-box !important;
+    padding: 0.375rem 0.75rem !important;
+    margin: 0 !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    resize: vertical !important;
+  }
+  
+  /* Override all textarea states */
+  textarea:focus,
+  textarea.form-control:focus,
+  textarea#message:focus,
+  textarea#message.form-control:focus {
+    background: rgba(255, 255, 255, 0.08) !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border-color: #ffd700 !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 215, 0, 0.25) !important;
+    outline: none !important;
+  }
+  
+  /* Override autofill states */
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  textarea:-webkit-autofill:active,
+  textarea.form-control:-webkit-autofill,
+  textarea.form-control:-webkit-autofill:hover,
+  textarea.form-control:-webkit-autofill:focus,
+  textarea.form-control:-webkit-autofill:active,
+  textarea#message:-webkit-autofill,
+  textarea#message:-webkit-autofill:hover,
+  textarea#message:-webkit-autofill:focus,
+  textarea#message:-webkit-autofill:active,
+  textarea#message.form-control:-webkit-autofill,
+  textarea#message.form-control:-webkit-autofill:hover,
+  textarea#message.form-control:-webkit-autofill:focus,
+  textarea#message.form-control:-webkit-autofill:active {
+    background: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.05) inset !important;
+    -webkit-text-fill-color: #e5d295 !important;
+    color: #e5d295 !important;
+  }
+  
+  /* Remove all scrollbar styling */
+  textarea::-webkit-scrollbar,
+  textarea.form-control::-webkit-scrollbar,
+  textarea#message::-webkit-scrollbar,
+  textarea#message.form-control::-webkit-scrollbar {
+    width: 8px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  textarea::-webkit-scrollbar-thumb,
+  textarea.form-control::-webkit-scrollbar-thumb,
+  textarea#message::-webkit-scrollbar-thumb,
+  textarea#message.form-control::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 4px !important;
+  }
+  
+  textarea::-webkit-scrollbar-track,
+  textarea.form-control::-webkit-scrollbar-track,
+  textarea#message::-webkit-scrollbar-track,
+  textarea#message.form-control::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  /* Remove resize handle styling */
+  textarea::-webkit-resizer,
+  textarea.form-control::-webkit-resizer,
+  textarea#message::-webkit-resizer,
+  textarea#message.form-control::-webkit-resizer {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+    outline: none !important;
+  }
+  
+  /* Target any inner textarea elements */
+  textarea#message *,
+  textarea.form-control * {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e5d295 !important;
+  }
+  
+  /* Force textarea content area background */
+  textarea#message::before,
+  textarea#message::after,
+  textarea.form-control::before,
+  textarea.form-control::after {
+    background: rgba(255, 255, 255, 0.05) !important;
+    content: none !important;
+  }
+  
+  /* Override any browser default textarea styling */
+  textarea {
+    background: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    background-image: none !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  /* Ensure email autofill appears below the field */
+  input[type="email"] {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Force autocomplete dropdown to appear below */
+  input[type="email"]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+  
+  /* Button styling - FORCE NO FLATTENING */
+  button.btn.btn-outline-gold,
+  .btn.btn-outline-gold,
+  .btn-outline-gold,
+  button[type="submit"].btn.btn-outline-gold {
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    color: #e5d295 !important;
+    background: transparent !important;
+    transition: all 0.3s ease !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+    min-height: 48px !important;
+    min-width: 120px !important;
+  }
+  
+  button.btn.btn-outline-gold:hover, 
+  button.btn.btn-outline-gold:focus,
+  .btn.btn-outline-gold:hover, 
+  .btn.btn-outline-gold:focus,
+  .btn-outline-gold:hover, 
+  .btn-outline-gold:focus,
+  button[type="submit"].btn.btn-outline-gold:hover,
+  button[type="submit"].btn.btn-outline-gold:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffd700 !important;
+    border-color: #ffd700 !important;
+    border-radius: 8px !important;
+    transform: none !important;
+    box-shadow: none !important;
+    padding: 12px 24px !important;
+    min-height: 48px !important;
+    min-width: 120px !important;
+  }
+  
+  button.btn.btn-outline-gold:active,
+  .btn.btn-outline-gold:active,
+  .btn-outline-gold:active,
+  button[type="submit"].btn.btn-outline-gold:active {
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+    min-height: 48px !important;
+    min-width: 120px !important;
+    color: #ffd700 !important;
+  }
+  
+  /* Force button text to stay visible */
+  button.btn.btn-outline-gold .btn-text,
+  .btn.btn-outline-gold .btn-text,
+  .btn-outline-gold .btn-text,
+  button[type="submit"].btn.btn-outline-gold .btn-text {
+    color: inherit !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+  }
+  
+  button.btn.btn-outline-gold:hover .btn-text,
+  button.btn.btn-outline-gold:focus .btn-text,
+  .btn.btn-outline-gold:hover .btn-text,
+  .btn.btn-outline-gold:focus .btn-text,
+  .btn-outline-gold:hover .btn-text,
+  .btn-outline-gold:focus .btn-text,
+  button[type="submit"].btn.btn-outline-gold:hover .btn-text,
+  button[type="submit"].btn.btn-outline-gold:focus .btn-text,
+  button.btn.btn-outline-gold:active .btn-text,
+  .btn.btn-outline-gold:active .btn-text,
+  .btn-outline-gold:active .btn-text,
+  button[type="submit"].btn.btn-outline-gold:active .btn-text {
+    color: inherit !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline !important;
+  }
+  
+  /* X MARK - COMPLETELY ELIMINATE BLUE SQUARE */
+  button.custom-close,
+  .custom-close,
+  .modal-header .custom-close,
+  button.btn-close.custom-close,
+  .btn-close.custom-close {
+    background: none !important;
+    border: none !important;
+    font-size: 1.8rem !important;
+    color: #fff !important;
+    transition: color 0.3s ease !important;
+    padding: 0.5rem !important;
+    border-radius: 0 !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    position: relative !important;
+    filter: none !important;
+    opacity: 1 !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  button.custom-close::before,
+  .custom-close::before,
+  .modal-header .custom-close::before,
+  button.btn-close.custom-close::before,
+  .btn-close.custom-close::before {
+    content: "×" !important;
+    font-size: 2rem !important;
+    line-height: 1 !important;
+    color: #fff !important;
+  }
+  
+  button.custom-close:hover,
+  button.custom-close:focus,
+  .custom-close:hover,
+  .custom-close:focus,
+  .modal-header .custom-close:hover,
+  .modal-header .custom-close:focus,
+  button.btn-close.custom-close:hover,
+  button.btn-close.custom-close:focus,
+  .btn-close.custom-close:hover,
+  .btn-close.custom-close:focus {
+    color: #ffd700 !important;
+    background: none !important;
+    transform: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  button.custom-close:hover::before,
+  button.custom-close:focus::before,
+  .custom-close:hover::before,
+  .custom-close:focus::before,
+  .modal-header .custom-close:hover::before,
+  .modal-header .custom-close:focus::before,
+  button.btn-close.custom-close:hover::before,
+  button.btn-close.custom-close:focus::before,
+  .btn-close.custom-close:hover::before,
+  .btn-close.custom-close:focus::before {
+    color: #ffd700 !important;
+  }
+  
+  button.custom-close:focus,
+  .custom-close:focus,
+  .modal-header .custom-close:focus,
+  button.btn-close.custom-close:focus,
+  .btn-close.custom-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Custom golden chevron - OVERRIDE EXISTING RULE */
+  select.form-select.form-select-gold {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffd700' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m1 6 7 7 7-7'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+    padding-right: 2.5rem !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+  } 
+  
+  /* ONLY FIX TEXTAREA - LEAVE EVERYTHING ELSE ALONE */
+  textarea#message {
+    background: rgba(255, 255, 255, 0.05) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  textarea#message::-webkit-scrollbar {
+    background: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  textarea#message::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+  } 
+  
+  textarea#message,
+  textarea#message.form-control {
+    background: rgba(255,255,255,0.05) !important;
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #e5d295 !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-clip: padding-box !important;
+    -webkit-box-shadow: none !important;
+    -webkit-background-clip: padding-box !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    resize: vertical !important;
+    padding: 0.375rem 0.75rem !important;
+  }
+  
+  /* Remove any inner shadow or highlight in WebKit browsers */
+  textarea#message:-webkit-autofill,
+  textarea#message:-webkit-autofill:focus,
+  textarea#message:-webkit-autofill:hover,
+  textarea#message:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.05) inset !important;
+    background: rgba(255,255,255,0.05) !important;
+    background-color: rgba(255,255,255,0.05) !important;
+    color: #e5d295 !important;
+    -webkit-text-fill-color: #e5d295 !important;
+  }
+  
+  /* Remove any pseudo-element backgrounds */
+  textarea#message::before,
+  textarea#message::after {
+    background: none !important;
+    content: none !important;
+  }
+  
+  textarea#message::-webkit-resizer {
+    background: url('data:image/svg+xml;utf8,<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><polyline points="4,12 12,12 12,4" fill="none" stroke="%23e5d295" stroke-width="2"/></svg>') no-repeat center center;
+    background-size: 16px 16px;
+  }
+  
+  textarea#message {
+    resize: none !important;
+  }

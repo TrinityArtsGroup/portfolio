@@ -1,168 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rutgers Adobe Showcase</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="showcase/showcase.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
-    <script src="showcase/showcase.js" defer></script>
-    <script src="site_nav.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinity Arts Group</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Styles -->
+  <link href="css/global-styles.css"rel="stylesheet">
+  <link href="css/showcase.css"rel="stylesheet">
+  <link href="favicon.ico" type="image/x-icon" rel="icon">
 </head>
 <body>
-  <nav class="nav-container" aria-label="Main">
-  <div class="logo-container">
-    <a href="index.html">
-    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo">
-   </a>
-  </div>
-  <div class="nav-controls">
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-</nav>
-<div class="nav-drawer-bg" tabindex="-1"></div>
-<nav class="nav-drawer" aria-label="Main navigation" tabindex="-1">
-  <div class="nav-drawer-header">
-    <a href="index.html">
-    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo" class="drawer-logo">
-    </a>
-    <button class="drawer-close" aria-label="Close navigation">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
-  <ul class="nav-drawer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="audio.html">Audio</a></li>
-    <li><a href="design.html">Design</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li>
-      <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-        Class Portfolio <i class="fa-solid fa-plus"></i>
+ <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="media/main/logo_horizontal.png" alt="Trinity Arts Group Logo">
+      </a>
+      <!-- Desktop Navigation -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Who We Are</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+              <li><a class="dropdown-item" href="resume.html">Patrick Flynn Resume</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Commissions</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="artwork.html">Artwork</a></li>
+              <li><a class="dropdown-item" href="brands.html">Branding</a></li>
+              <li><a class="dropdown-item" href="design.html">Graphic Design</a></li>
+              <li><a class="dropdown-item" href="production.html">Production Services</a></li>
+              <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="video.html">Documentaries</a></li>
+              <li><a class="dropdown-item" href="video.html">Features</a></li>
+              <li><a class="dropdown-item" href="audio.html">Music</a></li>
+              <li><a class="dropdown-item" href="theatre.html">Theatre</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="film-transfers.html">Negative Transfers</a></li>
+              <li><a class="dropdown-item" href="photo-restoration.html">Photo Restorations</a></li>
+              <li><a class="dropdown-item" href="tape-digitization.html">Tape Digitization</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Class Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" aria-current="page" href="showcase.html">Adobe Showcase</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Color Theory</h6></li>
+              <li><a class="dropdown-item" href="color-theory.html">Color Theory Primer</a></li>
+              <li><a class="dropdown-item" href="color-themes.html">Various Color Themes</a></li>
+              <li><a class="dropdown-item" href="color-article.html">Web Page Article</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="game.html">Game Screen</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Interactive Quizzes</h6></li>
+              <li><a class="dropdown-item" href="quiz-us-history.html">U.S. History Quiz</a></li>
+              <li><a class="dropdown-item" href="quiz-mine.html">Cinema History Quiz</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Typography</h6></li>
+              <li><a class="dropdown-item" href="typography.html">Typography Primer</a></li>
+              <li><a class="dropdown-item" href="font-types.html">Article on Font Types</a></li>
+              <li><a class="dropdown-item" href="typo-article.html">Typography Article</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex gap-2">
+          <button class="btn-nav-control" id="fontToggle">
+            <i class="fa-solid fa-font"></i>
+          </button>
+          <button class="btn-nav-control" id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>     
+<!-- Mobile Hamburger -->
+      <button class="navbar-toggler" type="button" id="navToggle">
+        <div class="custom-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
-      <div class="drawer-dropdown">
-        <a class="drawer-dropdown-link" href="showcase.html" class="active" aria-current="page">Adobe Showcase</a>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Color Theory <i class="fa-solid fa-plus"></i>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="nav-drawer-overlay" id="navOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="nav-drawer-header">
+      <a href="index.html">
+        <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo" class="drawer-logo">
+      </a>
+      <button class="drawer-close" id="drawerClose">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    
+    <ul class="nav-drawer-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="whoWeAre">
+          Who We Are <i class="fa-solid fa-plus"></i>
         </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
-          <a class="drawer-dropdown-link" href="color-themes.html">Various Color Themes</a>
-          <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
+        <div class="drawer-dropdown" id="whoWeAre">
+          <a class="drawer-dropdown-link" href="about-us.html">About Us</a>
+          <a class="drawer-dropdown-link" href="resume.html">Patrick Flynn Resume</a>
         </div>
-        <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-        Interactive Quizzes<i class="fa-solid fa-plus"></i>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="commissions">
+          Commissions <i class="fa-solid fa-plus"></i>
         </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="quiz-us-history.html">U.S. History Quiz</a>
-          <a class="drawer-dropdown-link" href="quiz-mine.html">Cinema History Quiz</a>
+        <div class="drawer-dropdown" id="commissions">
+          <a class="drawer-dropdown-link" href="artwork.html">Artwork</a>
+          <a class="drawer-dropdown-link" href="brands.html">Branding</a>
+          <a class="drawer-dropdown-link" href="design.html">Graphic Design</a>
+          <a class="drawer-dropdown-link" href="production.html">Production Services</a>
+          <a class="drawer-dropdown-link" href="web-design.html">Web Design</a>
         </div>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-          Typography <i class="fa-solid fa-plus"></i>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="projects">
+          Projects <i class="fa-solid fa-plus"></i>
         </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="typography.html">Typography Primer</a>
-          <a class="drawer-dropdown-link" href="font-types.html">Article on Font Types</a>
-          <a class="drawer-dropdown-link" href="typo-article.html">Typography Article</a>
+        <div class="drawer-dropdown" id="projects">
+          <a class="drawer-dropdown-link" href="video.html">Documentaries</a>
+          <a class="drawer-dropdown-link" href="video.html">Features</a>
+          <a class="drawer-dropdown-link" href="audio.html">Music</a>
+          <a class="drawer-dropdown-link" href="theatre.html">Theatre</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="services">
+          Services <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="services">
+          <a class="drawer-dropdown-link" href="film-transfers.html">Negative Transfers</a>
+          <a class="drawer-dropdown-link" href="photo-restoration.html">Photo Restorations</a>
+          <a class="drawer-dropdown-link" href="tape-digitization.html">Tape Digitization</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="classPortfolio">
+          Class Portfolio <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="classPortfolio">
+          <a class="drawer-dropdown-link active" aria-current="page" href="showcase.html">Adobe Showcase</a>
+          
+          <button class="drawer-dropdown-trigger" data-target="colorTheory">
+            Color Theory <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="colorTheory">
+            <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
+            <a class="drawer-dropdown-link" href="color-themes.html">Various Color Themes</a>
+            <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
+          </div>
+          
+          <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
+          
+          <button class="drawer-dropdown-trigger" data-target="quizzes">
+            Interactive Quizzes <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="quizzes">
+            <a class="drawer-dropdown-link" href="quiz-us-history.html">U.S. History Quiz</a>
+            <a class="drawer-dropdown-link" href="quiz-mine.html">Cinema History Quiz</a>
+          </div>
+          
+          <button class="drawer-dropdown-trigger" data-target="typography">
+            Typography <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="typography">
+            <a class="drawer-dropdown-link" href="typography.html">Typography Primer</a>
+            <a class="drawer-dropdown-link" href="font-types.html">Article on Font Types</a>
+            <a class="drawer-dropdown-link" href="typo-article.html">Typography Article</a>
+          </div>
+        </div>
+      </li>
+      
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    
+    <div class="drawer-controls">
+      <button class="btn-drawer-control" id="fontToggleDrawer">
+        <i class="fa-solid fa-font"></i>
+      </button>
+      <button class="btn-drawer-control" id="themeToggleDrawer">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container py-5">
+    <div class="section-bg">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="section-title mb-4">Rutgers Class Showcase</h1>
+          <p class="lead">Welcome to my showcase page! Here, you can explore various projects I've completed during my time at Rutgers. Each project reflects my learning journey and the skills I've developed in design, animation, and restoration.</p>
         </div>
       </div>
-    </li>
-    <li><a href="theatre.html">Theatre</a></li>
-    <li><a href="video.html">Video</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-    <div class="drawer-controls">
-      <button class="font-toggle-btn" aria-label="Toggle font size">
-      <i class="fa-solid fa-font"></i>
-    </button>
-    <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
     </div>
-</nav>
 
-<main class="readable-overlay">
-  <h1>Rutgers Class Showcase</h1>
-  <p>Welcome to my showcase page! Here, you can explore various projects I've completed during my time at Rutgers. Each project reflects my learning journey and the skills I've developed 
-  in design, animation, and restoration.</p>
+    <!-- Business Card Section -->
+    <section class="showcase-item mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="card-wrapper text-center">
+            <div class="card-container">
+              <img src="media/showcase/card1.png" alt="Business Card Front" class="card front img-fluid">
+              <img src="media/showcase/card2.png" alt="Business Card Back" class="card back img-fluid">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2>Business Card</h2>
+          <p>I seized upon the opportunity to be able to market my unique skillset and talent to the largest possible audience. In doing so, I thought deeply on the legacy of the brand as the name "Trinity" was my father's pipefitting business for 30+ years. I also considered the history New Jersey has in film. I began by first cannibalizing the logo of an earlier production company I had, as a marker for the front card, with the updated logo on the reverse. I utilized a gold and black palette to evoke nostalgia as the business is geared towards archival restorations of film negatives, photo restorations, and digital transfers.</p>
+          <p><em><strong><u>Hover over the card image to see the reverse.</u></strong></em></p>
+        </div>
+      </div>
+    </section>
 
-  <section class="showcase-item">
-  <h1>Business Card</h1>
-  <div class="wrap-section">
-  <div class="media-column">
-  <div class="card-wrapper">
-  <img src="showcase/card1.png" alt="Business Card Front" class="card front">
-  <img src="showcase/card2.png" alt="Business Card Back" class="card back">
+    <!-- Animation Section -->
+    <section class="showcase-item mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="video-container">
+            <video class="showcase-video w-100" controls>
+              <source src="media/showcase/final-project-no-1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2><em>"A Tug of War"</em> - Adobe Animate Example</h2>
+          <p>I started by breaking down two assets I had used previously in the Animate course into individual rigs. Through a combination of classic tweening, and public domain materials I tried to come up with a simple, clear, and funny little animation. I made two 4 second loops to simulate the back-and-forth pushing and pulling the turkey was doing. I then did likewise for the elephant's back and forth movement. I was aiming for an Abbott and Costello, or Laurel and Hardy type feeling, and hopefully I've achieved it.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Restoration Section -->
+    <section class="showcase-item mb-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="mb-4">Photo Restoration</h2>
+          <div class="img-compare-container mb-4" id="img-compare">
+            <img src="media/showcase/before1.png" alt="Before Restoration" class="img-compare-img img-compare-before">
+            <img src="media/showcase/after1.png" alt="After Restoration" class="img-compare-img img-compare-after">
+            <div class="img-compare-slider" id="img-slider"></div>
+          </div>
+          <p>This project meant a lot to me, as I chose for this restoration a baby photo of my maternal grandfather: Warren Seward Hopkins. It was so exciting to learn a bit more about my Mother's side of the family – while simultaneously getting the best photo for the project's needs. This was, I believe, an old linotype photo that was from a disintegrating photo album – however it was an album, I learned, that was literally hand compiled and annotated by my grandfather himself, written in his hand and by his old typewriter. The unique discoloring on the sides from the degrading masking tape, the photo album fibers surrounding it, the extensive cracking, pinholes, and scratches on the print made it a suitable example to restore.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Magazine Cover Section -->
+    <section class="showcase-item mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="media/showcase/mag.jpg" alt="Fantomas Magazine Cover" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <h2><em>"Fantomas"</em> Magazine Cover</h2>
+          <p>I remember seeing a poster for the forgotten 1931 thriller Fantomas in one of the auditoriums at the School of Visual Arts and the logotype always stuck with me, as did the name. I took that kernel of an idea and ran with it – exploring my latest interests with the undersung classic comedian Buster Keaton, in his many hats as actor, director, writer and stunt person – as well as the author Charles Beaumont and the near completely forgotten 1960's television artist and actor-writer Ernie Kovacs. The main image utilized is a publicity photo of Buster Keaton taken on set of his famous 1928 film <em>"The Cameraman"</em>, now in the public domain.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Ad Section -->
+    <section class="showcase-item mb-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img src="media/showcase/social.png" alt="Social Media Ad" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+          <h2>Social Media Ad</h2>
+          <p>This social media advertisement showcases the integration of modern design principles with compelling visual storytelling to create engaging promotional content for digital platforms. It is a work in progress, as finding original photographs for the original carbon filament incandescent lamps are proving mighty difficult to come by, unfortunately. But, this is a step in the right direction.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer class="site-footer d-flex justify-content-between align-items-end px-4 py-3">
+  <div class="footer-logo">
+    <img src="media/main/logo.png" alt="Trinity Arts Group Logo">
   </div>
-  </div>
-  <div class="text-column">
-    <p>I seized upon the opportunity to be able to market my unique skillset and talent to the largest possible audience. In doing so, I thought deeply on the legacy of the brand 
-    as the name “Trinity” was my father’s pipefitting business for 30+ years. I also considered the history New Jersey has in film. I began by first cannibalizing the logo of 
-    an earlier production company I had, as a marker for the front card, with the updated logo on the reverse. I utilized a gold and black palette to evoke nostalgia as the business 
-    is geared towards archival restorations of film negatives, photo restorations, and digital transfers. <br><br>
-    <em><strong><u>Hover over the card image to see the reverse.</em></strong></u></p>
-  </div>
-  </div>
-  </section>
-
-  <section class="showcase-item">
-    <div class="wrap-section">
-    <div class="media-column">
-      <video class="showcase-video" controls>
-      <source src="showcase/final-project-no-1.mp4" type="video/mp4"></video>
-    </div>
-    <div class="text-column">
-    <h2><em>"A Tug of War"</em>- Adobe Animate Example</h2>
-    <p> I started by breaking down two assets I had used previously in the Animate course into individual rigs. Through a combination of classic tweening, and public domain materials 
-    I tried to come up with a simple, clear, and funny little animation. I made two 4 second loops to simulate the back-and-forth pushing and pulling the turkey was doing. I then did 
-    likewise for the elephant’s back and forth movement. I was aiming for an Abbott and Costello, or Laurel and Hardy type feeling, and hopefully I’ve achieved it.</p>
-    </div>
-    </div>
-   </section>
-
-<section class="showcase-item photo-restore-exact">
-  <h2>Photo Restoration</h2>
-  <div class="img-compare-container" id="img-compare">
-    <img src="showcase/before1.png" alt="Before Restoration" class="img-compare-img img-compare-before">
-    <img src="showcase/after1.png" alt="After Restoration" class="img-compare-img img-compare-after">
-    <div class="img-compare-slider" id="img-slider"></div>
-  </div>
-  <p>This project meant a lot to me, as I chose for this restoration a baby photo of my maternal grandfather: Warren Seward Hopkins. It was so exciting to learn a bit more about my Mother’s side of 
-  the family – while simultaneously getting the best photo for the project’s needs. This was, I believe, an old linotype photo that was from a disintegrating photo album – however it was an album, 
-  I learned, that was literally hand compiled and annotated by my grandfather himself, written in his hand and by his old typewriter. The unique discoloring on the sides from the degrading masking 
-  tape, the photo album fibers surrounding it, the extensive cracking, pinholes, and scratches on the print made it a suitable example to restore. </p>
-  </section>
-
-  <section class="showcase-item">
-    <h1><em>"Fantomas"</em> Magazine Cover</h1>
-    <img src="showcase/mag.jpg" alt="Magazine Cover">
-    <p>I remember seeing a poster for the forgotten 1931 thriller Fantomas in one of the auditoriums at the School of Visual Arts and the logotype always stuck with me, as did the name. I took
-    that kernel of an idea and ran with it – exploring my latest interests with the undersung classic comedian Buster Keaton, in his many hats as actor, director, writer and stunt person – as 
-    well as the author Charles Beaumont and the near completely forgotten 1960’s television artist and actor-writer Ernie Kovacs. The main image utilized is a publicity photo of Buster Keaton 
-    taken on set of his famous 1928 film <em>"The Cameraman"</em>, now in the public domain.</p>
-  </section>
-
-  <section class="showcase-item">
-    <h1>Social Media Ad</h1>
-    <img src="showcase/social-ad.jpg" alt="Ad Graphic">
-  </section>
-  
-</main>
-<footer>
-  <hr>
-  <div class="footer-container">
-    <img src="images/logo.png" alt="Logo" class="footer-logo">
-    <div class="footer-info">
-      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
-      <p><i class="fa-regular fa-copyright"></i> 2025 Trinity Arts Group LLC. All rights reserved.</p>
-    </div>
+  <div class="footer-contact text-end">
+    <p><i class="fa-solid fa-phone me-2"></i><a href="tel:+19734009362">+1 (973) 400–9362</a></p>
+    <p><i class="fa-regular fa-copyright me-2"></i>2025 Trinity Arts Group LLC. All rights reserved.</p>
   </div>
 </footer>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/global-scripts.js"></script>
+<script src="js/showcase.js"></script>
 </body>
 </html>

@@ -1,341 +1,499 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick Flynn - Video Editor Resume</title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="sitewide.css">
-    <link rel="stylesheet" href="resume/resume.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/55a8738ed7.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,700&display=swap" rel="stylesheet">
-    <script src="site_nav.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrick Flynn - Resume</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Styles -->
+  <link href="css/global-styles.css"rel="stylesheet">
+  <link href="css/resume.css"rel="stylesheet">
+  <link href="favicon.ico" type="image/x-icon" rel="icon">
 </head>
 <body>
-  <nav class="nav-container" aria-label="Main">
-  <div class="logo-container">
-    <a href="index.html">
-    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo">
-   </a>
-  </div>
-  <div class="nav-controls">
-    <button class="nav-toggle" aria-label="Toggle navigation">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-</nav>
-<div class="nav-drawer-bg" tabindex="-1"></div>
-<nav class="nav-drawer" aria-label="Main navigation" tabindex="-1">
-  <div class="nav-drawer-header">
-    <a href="index.html">
-    <img src="images/logo_horizontal.png" alt="Trinity Arts Group Logo" class="drawer-logo">
-    </a>
-    <button class="drawer-close" aria-label="Close navigation">
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-  </div>
-  <ul class="nav-drawer-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="audio.html">Audio</a></li>
-    <li><a href="design.html">Design</a></li>
-    <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
-    <li>
-      <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-        Class Portfolio <i class="fa-solid fa-plus"></i>
-      </button>
-      <div class="drawer-dropdown">
-        <a class="drawer-dropdown-link" href="showcase.html">Adobe Showcase</a>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Color Theory <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
-          <a class="drawer-dropdown-link" href="color-themes.html">Various Color Themes</a>
-          <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
-        </div>
-        <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-        Interactive Quizzes<i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="quiz-us-history.html">U.S. History Quiz</a>
-          <a class="drawer-dropdown-link" href="quiz-mine.html">Cinema History Quiz</a>
-        </div>
-        <button class="drawer-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-          Typography <i class="fa-solid fa-plus"></i>
-        </button>
-        <div class="drawer-dropdown">
-          <a class="drawer-dropdown-link" href="typography.html">Typography Primer</a>
-          <a class="drawer-dropdown-link" href="font-types.html">Article on Font Types</a>
-          <a class="drawer-dropdown-link" href="typo-article.html">Typography Article</a>
+ <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="media/main/logo_horizontal.png" alt="Trinity Arts Group Logo">
+      </a>
+      <!-- Desktop Navigation -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Who We Are</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+              <li><a class="dropdown-item active" aria-current="page" href="resume.html">Patrick Flynn Resume</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Commissions</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="design.html">Artwork</a></li>
+              <li><a class="dropdown-item" href="commissions.html">Branding</a></li>
+              <li><a class="dropdown-item" href="commissions.html">Graphic Design</a></li>
+              <li><a class="dropdown-item" href="commissions.html">Production Services</a></li>
+              <li><a class="dropdown-item" href="web-develop.html">Web Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="video.html">Documentaries</a></li>
+              <li><a class="dropdown-item" href="video.html">Features</a></li>
+              <li><a class="dropdown-item" href="audio.html">Music</a></li>
+              <li><a class="dropdown-item" href="theatre.html">Theatre</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="services.html">Negative Transfers</a></li>
+              <li><a class="dropdown-item" href="services.html">Photo Restorations</a></li>
+              <li><a class="dropdown-item" href="services.html">Tape Digitization</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button">Class Portfolio</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="showcase.html">Adobe Showcase</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Color Theory</h6></li>
+              <li><a class="dropdown-item" href="color-theory.html">Color Theory Primer</a></li>
+              <li><a class="dropdown-item" href="color-themes.html">Various Color Themes</a></li>
+              <li><a class="dropdown-item" href="color-article.html">Web Page Article</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="game.html">Game Screen</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Interactive Quizzes</h6></li>
+              <li><a class="dropdown-item" href="quiz-us-history.html">U.S. History Quiz</a></li>
+              <li><a class="dropdown-item" href="quiz-mine.html">Cinema History Quiz</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><h6 class="dropdown-header">Typography</h6></li>
+              <li><a class="dropdown-item" href="typography.html">Typography Primer</a></li>
+              <li><a class="dropdown-item" href="font-types.html">Article on Font Types</a></li>
+              <li><a class="dropdown-item" href="typo-article.html">Typography Article</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+       
+        <!-- Theme and Font Controls -->
+        <div class="nav-controls d-flex align-items-center gap-2">
+          <button class="btn-nav-control theme-toggle-btn" id="themeToggle" title="Toggle Theme">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+          <button class="btn-nav-control font-toggle-btn" title="Toggle Font Size">
+            <i class="fas fa-font"></i>
+          </button>
         </div>
       </div>
-    </li>
-    <li><a href="theatre.html">Theatre</a></li>
-    <li><a href="video.html">Video</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-  </ul>
-    <div class="drawer-controls">
-      <button class="font-toggle-btn" aria-label="Toggle font size">
-      <i class="fa-solid fa-font"></i>
-    </button>
-    <button class="theme-toggle-btn" aria-label="Toggle light/dark mode">
-      <i class="fa-solid fa-moon"></i>
-    </button>
+      
+      <!-- Mobile Navigation Toggle -->
+      <button class="navbar-toggler" type="button" id="mobileMenuToggle">
+        <div class="custom-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
     </div>
-</nav>
+  </nav>
 
-<main class="resume-box readable-overlay"> 
-  <section>
-  <h2>Patrick Flynn - Video Editor</h2>
-  <a href="mailto:Flynn.PatrickJames@gmail.com">Flynn.PatrickJames@gmail.com</a><br>
-  <a href="https://www.linkedin.com/in/patrick-flynn-30a02136/">LinkedIn</a> ♦ 
-  <a href="https://www.trinityartsgroup.com">Trinity Arts Group</a> ♦
-  <a href="tel:+12012209488">(201) 220-9488</a>
-</section>
+  <!-- Mobile Navigation Drawer -->
+  <div class="nav-drawer-overlay" id="navDrawerOverlay"></div>
+  <nav class="nav-drawer" id="navDrawer">
+    <div class="nav-drawer-header">
+      <img src="media/main/logo_horizontal.png" alt="Trinity Arts Group Logo">
+      <button class="drawer-close" id="drawerClose">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <ul class="nav-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="whoWeAre">
+          Who We Are <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="whoWeAre">
+          <a class="drawer-dropdown-link" href="about-us.html">About Us</a>
+          <a class="drawer-dropdown-link active" aria-current="page" href="resume.html">Patrick Flynn Resume</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="commissions">
+          Commissions <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="commissions">
+          <a class="drawer-dropdown-link" href="design.html">Artwork</a>
+          <a class="drawer-dropdown-link" href="commissions.html">Branding</a>
+          <a class="drawer-dropdown-link" href="commissions.html">Graphic Design</a>
+          <a class="drawer-dropdown-link" href="commissions.html">Production Services</a>
+          <a class="drawer-dropdown-link" href="web-develop.html">Web Design</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="projects">
+          Projects <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="projects">
+          <a class="drawer-dropdown-link" href="video.html">Documentaries</a>
+          <a class="drawer-dropdown-link" href="video.html">Features</a>
+          <a class="drawer-dropdown-link" href="audio.html">Music</a>
+          <a class="drawer-dropdown-link" href="theatre.html">Theatre</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="services">
+          Services <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="services">
+          <a class="drawer-dropdown-link" href="services.html">Negative Transfers</a>
+          <a class="drawer-dropdown-link" href="services.html">Photo Restorations</a>
+          <a class="drawer-dropdown-link" href="services.html">Tape Digitization</a>
+        </div>
+      </li>
+      
+      <li>
+        <button class="drawer-dropdown-trigger" data-target="classPortfolio">
+          Class Portfolio <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="drawer-dropdown" id="classPortfolio">
+          <a class="drawer-dropdown-link" href="showcase.html">Adobe Showcase</a>
+          
+          <button class="drawer-dropdown-trigger" data-target="colorTheory">
+            Color Theory <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="colorTheory">
+            <a class="drawer-dropdown-link" href="color-theory.html">Color Theory Primer</a>
+            <a class="drawer-dropdown-link" href="color-themes.html">Various Color Themes</a>
+            <a class="drawer-dropdown-link" href="color-article.html">Web Page Article</a>
+          </div>
+          
+          <a class="drawer-dropdown-link" href="game.html">Game Screen</a>
+          
+          <button class="drawer-dropdown-trigger" data-target="quizzes">
+            Interactive Quizzes <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="quizzes">
+            <a class="drawer-dropdown-link" href="quiz-us-history.html">U.S. History Quiz</a>
+            <a class="drawer-dropdown-link" href="quiz-mine.html">Cinema History Quiz</a>
+          </div>
+          
+          <button class="drawer-dropdown-trigger" data-target="typography">
+            Typography <i class="fa-solid fa-plus"></i>
+          </button>
+          <div class="drawer-dropdown" id="typography">
+            <a class="drawer-dropdown-link" href="typography.html">Typography Primer</a>
+            <a class="drawer-dropdown-link" href="font-types.html">Article on Font Types</a>
+            <a class="drawer-dropdown-link" href="typo-article.html">Typography Article</a>
+          </div>
+        </div>
+      </li>
+      
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    
+    <div class="drawer-controls">
+      <button class="btn-drawer-control" id="mobileThemeToggle" title="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="btn-drawer-control font-toggle-btn" title="Toggle Font Size">
+        <i class="fas fa-font"></i>
+      </button>
+    </div>
+  </nav>
 
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Summary
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
-<p>Creative and detail-oriented Video Editor and Producer with extensive experience across digital and broadcast 
-environments known for delivering high-quality content under tight deadlines. Skilled and adaptable social media 
-editor, proficient in producing engaging audio content and managing multimedia project lifecycles. Versatile and 
-innovative screenwriter and playwright with a proven record of authoring and directing narrative features, 
-documentaries, and stage plays. Dedicated and results-driven media professional with expertise in crafting
-compelling productions through creative and technical leadership. Well-versed in blending passionate storytelling 
-with client requirements to create unforgettable screen/digital media experiences for audiences.</p>
-</div>
-</section>
+  <!-- Main Content -->
+  <main class="container py-5">
+    <div class="resume-section">
+      <!-- Header Section -->
+      <div class="resume-header">
+        <h1>Patrick Flynn - Video Editor</h1>
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope me-2"></i><a href="mailto:Flynn.PatrickJames@gmail.com">Flynn.PatrickJames@gmail.com</a></p>
+          <p><i class="fa-solid fa-phone me-2"></i><a href="tel:+12012209488">(201) 220-9488</a></p>
+          <p><i class="fa-solid fa-globe me-2"></i><a href="https://www.linkedin.com/in/patrick-flynn-30a02136/">LinkedIn</a></p>
+          <p><i class="fa-solid fa-building me-2"></i><a href="https://www.trinityartsgroup.com">Trinity Arts Group</a></p>
+        </div>
+        <a href="media/resume/resume.pdf" class="btn btn-outline-gold" download>
+          <i class="fa-solid fa-download me-2"></i>Download PDF Resume
+        </a>
+        </div>
 
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Areas of Expertise
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
-<table>
-  <tr>
-    <td>Video Editing & Production</td>
-    <td>Film Production/Post-Production</td>
-    <td>Scriptwriting & Storytelling</td>
-  </tr>
-  <tr>
-    <td>Project Management</td>
-    <td>Color Grading & Visual Effects</td>
-    <td>Creative Direction & Collaboration</td>
-  </tr>
-  <tr>
-    <td>Technical Troubleshooting</td>
-    <td>Audio Editing & Production</td>
-    <td>Multimedia Content Creation</td>
-  </tr>
-</table>
-</div>
-</section>
+      <!-- Summary Section -->
+      <div class="section-wrapper">
+        <div class="section-title-wrapper" data-bs-toggle="collapse" data-bs-target="#summary" aria-expanded="true">
+          <h2 class="section-title">Summary</h2>
+          <i class="fa-solid fa-chevron-left triangle-icon"></i>
+        </div>
+        <div class="collapse show" id="summary">
+          <div class="section-content">
+            <p class="lead">Creative and detail-oriented Video Editor and Producer with extensive experience across digital and broadcast 
+            environments known for delivering high-quality content under tight deadlines. Skilled and adaptable social media 
+            editor, proficient in producing engaging audio content and managing multimedia project lifecycles. Versatile and 
+            innovative screenwriter and playwleftfa-chevron-left with a proven record of authoring and directing narrative features, 
+            documentaries, and stage plays. Dedicated and results-driven media professional with expertise in crafting
+            compelling productions through creative and technical leadership. Well-versed in blending passionate storytelling 
+            with client requirements to create unforgettable screen/digital media experiences for audiences.</p>
+          </div>
+        </div>
+      </div>
 
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Professional Experience
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
+      <!-- Areas of Expertise -->
+      <div class="section-wrapper">
+        <div class="section-title-wrapper" data-bs-toggle="collapse" data-bs-target="#expertise" aria-expanded="true">
+          <h2 class="section-title">Areas of Expertise</h2>
+          <i class="fa-solid fa-chevron-left triangle-icon"></i>
+        </div>
+        <div class="collapse show" id="expertise">
+          <div class="section-content">
+            <table class="expertise-table">
+              <tr>
+                <td><i class="fa-solid fa-video me-2"></i>Video Editing & Production</td>
+                <td><i class="fa-solid fa-film me-2"></i>Film Production/Post-Production</td>
+                <td><i class="fa-solid fa-pen me-2"></i>Scriptwriting & Storytelling</td>
+                  </tr>
+                  <tr>
+                <td><i class="fa-solid fa-tasks me-2"></i>Project Management</td>
+                <td><i class="fa-solid fa-palette me-2"></i>Color Grading & Visual Effects</td>
+                <td><i class="fa-solid fa-users me-2"></i>Creative Direction & Collaboration</td>
+                  </tr>
+                  <tr>
+                <td><i class="fa-solid fa-wrench me-2"></i>Technical Troubleshooting</td>
+                <td><i class="fa-solid fa-volume-up me-2"></i>Audio Editing & Production</td>
+                <td><i class="fa-solid fa-layer-group me-2"></i>Multimedia Content Creation</td>
+                  </tr>
+              </table>
+              </div>
+            </div>
+          </div>
 
-<section class="nested-collapsible">
-<h3 class="collapsible-header">
-  Multiple Companies, New York Metropolitan Area (2010 – Present)
-  <i class="fa-solid fa-chevron-left triangle-icon"></i>
-</h3>
-<div class="collapsible-content">
-<p><strong>Video Editor & Multimedia Artist/Technician</strong></p>
-<p>Edit and assemble raw footage into polished final products, ensuring highest standard of visual and audio quality. 
-Collaborate with clients and creative teams to understand project requirements and create engaging multimedia content 
-for various platforms. Deliver multiple projects simultaneously to meet tight deadlines while maintaining creativity 
-and attention to detail. Manage and organize media assets and troubleshoot technical issues. Research industry trends 
-and software advancements.</p>
-<ul>
-  <li>Edited over ten hours of bonus material for Discovery Productions’ home video release of Dennis Hopper’s <em>Out 
-of the Blue</em> (1980), which was released by the British Film Institute and Severin Films (2021–2023).</li>
-  <li>Edited and enhanced the narrative feature <em>Guilty Conscience</em> (2023) for Gregg DaCosta Studios by performing 
-color grading and recording foley sound.</li>
-  <li>Performed production sound recording and boom operation for Billie Jean King’s interview in the documentary <em>Nasty</em> 
-(2024) for Libra Films & HBO Documentaries.</li>
-  <li>Authored and directed the one-act play <em>Servers</em> for the 2012 undergroundzero festival in New York City.</li>
-  <li>Wrote, directed, and edited the documentary feature <em>Our Hometown</em> (2013) for the Denville Historical Society.</li>
-  <li>Provided freelance AV technical support and multimedia operations for Audio Visual Associates (2010–2012).</li>
-</ul>
-</div>
-</section>
+      <!-- Professional Experience -->
+      <div class="section-wrapper">
+        <div class="section-title-wrapper" data-bs-toggle="collapse" data-bs-target="#experience" aria-expanded="true">
+          <h2 class="section-title">Professional Experience</h2>
+          <i class="fa-solid fa-chevron-left triangle-icon"></i>
+        </div>
+        <div class="collapse show" id="experience">
+          <div class="section-content">
+            <!-- Multiple Companies -->
+            <div class="subsection">
+              <div class="subsection-header collapsed" data-bs-toggle="collapse" data-bs-target="#multiple-companies" aria-expanded="false">
+                <div class="subsection-header-content">
+                  <h3 class="job-title mb-0">Video Editor & Multimedia Artist/Technician</h3>
+                  <p class="company-info">Multiple Companies • New York Metropolitan Area • 2010 – Present</p>
+                </div>
+                <i class="fa-solid fa-chevron-left triangle-icon"></i>
+                  </div>
+                  <div class="collapse" id="multiple-companies">
+                      <p>Edit and assemble raw footage into polished final products, ensuring highest standard of visual and audio quality. 
+                      Collaborate with clients and creative teams to understand project requirements and create engaging multimedia content 
+                for various platforms.</p>
+                      <ul class="achievement-list">
+                        <li>Edited over ten hours of bonus material for Discovery Productions' home video release of Dennis Hopper's <em>Out 
+                        of the Blue</em> (1980), which was released by the British Film Institute and Severin Films (2021–2023).</li>
+                        <li>Edited and enhanced the narrative feature <em>Guilty Conscience</em> (2023) for Gregg DaCosta Studios by performing 
+                        color grading and recording foley sound.</li>
+                        <li>Performed production sound recording and boom operation for Billie Jean King's interview in the documentary <em>Nasty</em> 
+                        (2024) for Libra Films & HBO Documentaries.</li>
+                        <li>Authored and directed the one-act play <em>Servers</em> for the 2012 undergroundzero festival in New York City.</li>
+                        <li>Wrote, directed, and edited the documentary feature <em>Our Hometown</em> (2013) for the Denville Historical Society.</li>
+                      </ul>
+                    </div>
+                  </div>
 
-<section class="nested-collapsible">
-<h3 class="collapsible-header">
-  NBCUniversal, CNBC, Englewood Cliffs, NJ (2013 – 2024)
-  <i class="fa-solid fa-chevron-left triangle-icon"></i>
-</h3>
-<div class="collapsible-content">
-<p><strong>Digital Video Editor</strong></p>
-<p>Produced, edited, and refined news packages, promotional material, and show openings for on-air broadcasts and created 
-social media content for CNBC.com and additional platforms. Prioritized concurrent tasks in a high-pressure and deadline-
-driven environment. Applied extensive knowledge of video formats and export procedures to plan and develop project features 
-and outcomes. Adapted to new projects and delivered high-quality outcomes with full accountability.</p>
-<ul>
-<li>Rapidly edited dozens of breaking news packages, obtaining approvals from executives and reporters on quick turnaround 
-time; packages involved lead stories for programs such as <em>Last Call</em>, <em>Nightly Business Report</em>, <em>Squawk 
-Box</em>, and <em>The News with Shepard Smith</em>, and covered a variety of topics including politics, entertainment, and 
-public health.</li>
-<li>Led migration to Adobe Creative Cloud to enable real-time project sharing and collaboration among digital and broadcast 
-team editors, thereby optimizing workflows and team productivity.</li>
-<li>Updated workflows and SOPs following company-wide graphics package overhaul across NBC Universal channels; trained editors 
-on new visual standards for multiple projects, both in broadcast as well as digital environments.</li>
-</ul>
-</div>
-</section>
+            <!-- NBCUniversal -->
+            <div class="subsection">
+              <div class="subsection-header collapsed" data-bs-toggle="collapse" data-bs-target="#nbcuniversal" aria-expanded="false">
+                <div class="subsection-header-content">
+                  <h3 class="job-title mb-0">Digital Video Editor</h3>
+                  <p class="company-info">NBCUniversal, CNBC • Englewood Cliffs, NJ • 2013 – 2024</p>
+                </div>
+                <i class="fa-solid fa-chevron-left triangle-icon"></i>
+                  </div>
+                  <div class="collapse" id="nbcuniversal">
+                      <p>Produced, edited, and refined news packages, promotional material, and show openings for on-air broadcasts and created 
+                social media content for CNBC.com and additional platforms.</p>
+                      <ul class="achievement-list">
+                  <li>Rapidly edited dozens of breaking news packages for programs including <em>Last Call</em>, <em>Nightly Business Report</em>, 
+                  <em>Squawk Box</em>, and <em>The News with Shepard Smith</em>.</li>
+                        <li>Led migration to Adobe Creative Cloud to enable real-time project sharing and collaboration among digital and broadcast 
+                  team editors.</li>
+                  <li>Updated workflows and SOPs following company-wide graphics package overhaul across NBC Universal channels.</li>
+                      </ul>
+                    </div>
+                  </div>
 
-<section class="nested-collapsible">
-<h3 class="collapsible-header">
-  Dangerous Ground Productions, New York, NY (2007 – 2012)
-  <i class="fa-solid fa-chevron-left triangle-icon"></i>
-</h3>
-<div class="collapsible-content">
-<p><strong>Assistant Director</strong></p>
-<p>During my tenure as Assistant Director of the non-profit multimedia theater production company Dangerous Ground, I worked on 
-over a dozen projects in totality, in roles as wide as set design, screen projection, sound mixing, and dramaturgy. I was
-responsible for the hiring and well-being of over two dozen cast and crew, and was intimately involved in all creative choices 
-during production and after. My key accomplishments include:</p>
-<ul>
-    <li>Sole adapter and writer on six full-length adaptations.</li>
-    <li>Lead video editor on all promotional materials.</li>
-    <li>In charge of logistical arrangements and call sheets.</li>
-    <li>Performed as co-lead actor and camera operator on multiple projects.</li>
-    <li><em>"John Cassavetes’ Husbands"</em> – Official Selection: NYC’s Under the Radar Festival, 2010.</li>
-</ul>
-</div>
-</section>
-</div>
-</section>
+            <!-- Dangerous Ground -->
+            <div class="subsection">
+              <div class="subsection-header collapsed" data-bs-toggle="collapse" data-bs-target="#dangerous-ground" aria-expanded="false">
+                <div class="subsection-header-content">
+                  <h3 class="job-title mb-0">Assistant Director</h3>
+                  <p class="company-info">Dangerous Ground Productions • New York, NY • 2007 – 2012</p>
+                </div>
+                <i class="fa-solid fa-chevron-left triangle-icon"></i>
+                  </div>
+                  <div class="collapse" id="dangerous-ground">
+                <p>Led non-profit multimedia theater production company through dozens of projects, handling roles from set design to sound mixing.</p>
+                      <ul class="achievement-list">
+                        <li>Sole adapter and writer on six full-length adaptations.</li>
+                        <li>Lead video editor on all promotional materials.</li>
+                  <li>Managed logistical arrangements and call sheets.</li>
+                  <li>Co-lead actor and camera operator on multiple projects.</li>
+                        <li><em>"John Cassavetes' Husbands"</em> – Official Selection: NYC's Under the Radar Festival, 2010.</li>
+                      </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Additional Experience
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
-<p><strong>Film/Video Production Teacher</strong>, Newark Academy, Livingston, NJ</p>
-</div>
-</section>
+      <!-- Education -->
+      <div class="section-wrapper">
+        <div class="section-title-wrapper" data-bs-toggle="collapse" data-bs-target="#education" aria-expanded="true">
+          <h2 class="section-title">Education</h2>
+          <i class="fa-solid fa-chevron-left triangle-icon"></i>
+        </div>
+            <div class="collapse show" id="education">
+          <div class="section-content">
+            <div class="row g-4">
+                  <div class="col-md-6">
+                <div class="education-card">
+                  <h3 class="job-title">School of Visual Arts, NY</h3>
+                  <p class="company-info">Bachelor of Fine Arts in Film/Video • 2010</p>
+                  <p>Concentration in Directing</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                <div class="education-card">
+                  <h3 class="job-title">Rutgers University, NJ</h3>
+                  <p class="company-info">Certificate of Achievement • 2025</p>
+                  <p>Web Design Professional</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Education
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
-<ul>
-  <li><strong>School of Visual Arts, NY (2010)</strong>
-<ul>
-  <li>Bachelor of Fine Arts in Film/Video <em>(Concentration in Directing)</em></li></ul>
-<li><strong>Rutgers University, NJ (2025)</strong>
-  <ul><li>Certificate of Achievement <em>(Web Design Professional)</em></li></ul>
-</ul>
-</div>
-</section>
-
-<section class="collapsible">
-<h2 class="collapsible-header">
-  Technical Proficiencies
-  <i class="fa-solid fa-chevron-down triangle-icon"></i>
-</h2>
-<div class="collapsible-content">
-<ul>
-  <li>Avid Media Composer</li>
-  <li>Adobe Creative Suite</li>
-  <li>DaVinci Resolve</li>
-  <li>Final Cut Pro</li>
-  <li>Edius/Grass Valley</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>Alternative PDF for Download</h2>
-<a class="blue-btn inline-btn" href="resume/resume.pdf" target="_blank">View PDF Resume</a>
-</section>
-
-</main>
-<footer>
-  <hr>
-  <div class="footer-container">
-    <img src="images/logo.png" alt="Logo" class="footer-logo">
-    <div class="footer-info">
-      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:patrick@trinityartsgroup.com"> Patrick@TrinityArtsGroup.com</a></p>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+19734009362"> +1 (973) 400-9362</a></p>
-      <p><i class="fa-regular fa-copyright"></i> 2025 Trinity Arts Group LLC. All rights reserved.</p>
+      <!-- Technical Skills -->
+      <div class="section-wrapper">
+        <div class="section-title-wrapper" data-bs-toggle="collapse" data-bs-target="#skills" aria-expanded="true">
+          <h2 class="section-title">Technical Skills</h2>
+          <i class="fa-solid fa-chevron-left triangle-icon"></i>
+                    </div>
+        <div class="collapse show" id="skills">
+          <div class="section-content">
+            <table class="expertise-table">
+              <tr>
+                <td>
+                  <img src="media/resume/adobe.png" alt="Adobe" class="tech-icon">
+                  Adobe Creative Suite
+                </td>
+                <td>
+                  <img src="media/resume/avid.png" alt="Avid" class="tech-icon">
+                  Avid Media Composer
+                </td>
+                <td>
+                  <img src="media/resume/da-vinci.png" alt="DaVinci Resolve" class="tech-icon">
+                  DaVinci Resolve
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <img src="media/resume/edius.png" alt="Edius 11 Pro" class="tech-icon">
+                  Edius 11 Pro
+                </td>
+                <td>
+                  <img src="media/resume/final-cut.png" alt="Final Cut Pro" class="tech-icon">
+                  Final Cut Pro
+                </td>
+                <td>
+                  <img src="media/resume/pro-tools.png" alt="Pro Tools" class="tech-icon">
+                  Pro Tools
+                </td>
+              </tr>
+            </table>
+        </div>
+      </div>
     </div>
   </div>
+</main>
+
+  <!-- Footer -->
+<footer class="site-footer d-flex justify-content-between align-items-end px-4 py-3">
+  <div class="footer-logo">
+    <img src="media/main/logo.png" alt="Trinity Arts Group Logo">
+  </div>
+  <div class="footer-contact text-end">
+    <p><i class="fa-solid fa-phone me-2"></i><a href="tel:+19734009362">+1 (973) 400–9362</a></p>
+    <p><i class="fa-regular fa-copyright me-2"></i>2025 Trinity Arts Group LLC. All rights reserved.</p>
+  </div>
 </footer>
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/global-scripts.js"></script>
 <script>
-  function updateParentHeight(element) {
-    const parentContent = element.closest('.collapsible-content');
-    if (parentContent && parentContent.classList.contains('expanded')) {
-      parentContent.style.maxHeight = parentContent.scrollHeight + "px";
-    }
-  }
+function updateChevron(icon, expanded) {
+  if (!icon) return;
+  console.log(`Updating chevron: expanded = ${expanded}`);
+  icon.classList.remove("fa-chevron-left", "fa-chevron-down");
+  // chevron-down when opened (expanded = true), chevron-left when closed (expanded = false)
+  const newClass = expanded ? "fa-chevron-down" : "fa-chevron-left";
+  console.log(`Adding class: ${newClass}`);
+  icon.classList.add(newClass);
+}
 
-  function expandSection(header, content, icon) {
+function updateSectionState(header, expanded) {
+  const icon = header.querySelector(".triangle-icon");
+  updateChevron(icon, expanded);
+  if (expanded) {
     header.classList.add("active");
-    content.classList.add("expanded");
-    content.style.maxHeight = content.scrollHeight + "px";
-    setTimeout(() => {
-      if (content.classList.contains('expanded')) {
-        content.style.maxHeight = "none";
-      }
-    }, 400);
-    if (icon) {
-      icon.classList.replace("fa-chevron-left", "fa-chevron-down");
-    }
-    setTimeout(() => updateParentHeight(content), 50);
-  }
-
-  function collapseSection(header, content, icon) {
+  } else {
     header.classList.remove("active");
-    content.classList.remove("expanded");
-    content.style.maxHeight = content.scrollHeight + "px";
-    requestAnimationFrame(() => {
-      content.style.maxHeight = "0px";
-    });
-    if (icon) {
-      icon.classList.replace("fa-chevron-down", "fa-chevron-left");
-    }
-    setTimeout(() => updateParentHeight(content), 50);
   }
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".collapsible").forEach(section => {
-      const header = section.querySelector(".collapsible-header");
-      const content = section.querySelector(".collapsible-content");
-      const icon = header.querySelector(".triangle-icon");
-      expandSection(header, content, icon);
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const allHeaders = document.querySelectorAll(".section-title-wrapper, .subsection-header");
 
-    document.querySelectorAll(".nested-collapsible").forEach(section => {
-      const header = section.querySelector(".collapsible-header");
-      const content = section.querySelector(".collapsible-content");
-      const icon = header.querySelector(".triangle-icon");
-      collapseSection(header, content, icon);
-    });
+  allHeaders.forEach(header => {
+    const collapseTarget = document.querySelector(header.getAttribute("data-bs-target"));
+    const icon = header.querySelector(".triangle-icon");
 
-    document.querySelectorAll(".collapsible-header").forEach(header => {
-      header.addEventListener("click", e => {
-        e.stopPropagation();
-        const content = header.nextElementSibling;
-        const icon = header.querySelector(".triangle-icon");
-        const isExpanded = header.classList.contains("active");
-        isExpanded ? collapseSection(header, content, icon) : expandSection(header, content, icon);
-      });
+    // Set icon on load - check if section is expanded
+    const isExpanded = collapseTarget.classList.contains("show");
+    console.log(`Section ${header.getAttribute("data-bs-target")}: isExpanded = ${isExpanded}`);
+    updateChevron(icon, isExpanded);
+
+    // Hook Bootstrap's collapse events
+    collapseTarget.addEventListener("show.bs.collapse", () => updateSectionState(header, true));
+    collapseTarget.addEventListener("hide.bs.collapse", () => updateSectionState(header, false));
+
+    // Optional: Make the header clickable too
+    header.addEventListener("click", e => {
+      e.preventDefault();
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseTarget);
+      collapseTarget.classList.contains("show") ? bsCollapse.hide() : bsCollapse.show();
     });
   });
+});
 </script>
 </body>
 </html>

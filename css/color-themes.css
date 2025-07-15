@@ -1,0 +1,71 @@
+      body {
+        background: #181818;
+        color: #e5d295;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Sorts Mill Goudy', serif;
+        color: #ffd700;
+      }
+      .swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 0.25rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+        border: 1px solid #fff3;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+      }
+      .hex {
+        display: inline-block;
+        min-width: 70px;
+        margin-right: 1rem;
+        color: #fff;
+        font-size: 0.95rem;
+        vertical-align: middle;
+      }
+      .table td, .table th {
+        vertical-align: middle;
+      }
+      .art-footer {
+        background: #1a1a1a;
+        color: #e5d295;
+        border-top: 2px solid #ffd700;
+        padding: 2rem 0 1rem 0;
+      }
+      .art-footer a { color: #ffd700; }
+      .art-footer a:hover { color: #fff; }
+      p {
+        text-indent: 2em;
+        margin-bottom: 1.2em;
+      }
+
+       body {
+        background: #181818;
+        color: #e5d295;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Sorts Mill Goudy', serif;
+        color: #ffd700;
+      }
+      .art-footer {
+        background: #1a1a1a;
+        color: #e5d295;
+        border-top: 2px solid #ffd700;
+        padding: 2rem 0 1rem 0;
+      }
+      .art-footer a { color: #ffd700; }
+      .art-footer a:hover { color: #fff; }
+      dt {
+        color: #ffd700;
+        font-weight: 600;
+      }
+      dd {
+        margin-bottom: 1.2rem;
+        color: #e5d295;
+      }
+      p {
+        text-indent: 2em;
+        margin-bottom: 1.2em;
+      }
